@@ -11,19 +11,55 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="5PL-t2-c6U">
+            <objects>
+                <viewController id="i39-Ig-4cM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5va-ox-WxK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="4xO-LO-Erw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eLR-NL-HQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3821" y="-697"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="J0M-PT-sbY">
             <objects>
                 <viewController id="DPX-90-gC1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aWz-8E-Lg5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="splashimg.png" translatesAutoresizingMaskIntoConstraints="NO" id="gMp-J3-nYN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="QE8-Lv-U8q"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tri-ah-DtB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3309" y="-74"/>
+            <point key="canvasLocation" x="-3810.144927536232" y="145.98214285714286"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0MX-QT-lyn">
+            <objects>
+                <viewController id="80u-3i-7hu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fCZ-V6-vuz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Fjp-iO-V2I"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eDf-Rw-fgx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3802" y="1064"/>
         </scene>
         <!--Item-->
         <scene sceneID="7JR-F7-8q1">
@@ -32,14 +68,14 @@
                     <view key="view" contentMode="scaleToFill" id="NDc-4F-jNe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.1175853208" blue="0.1042221836" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="xjV-Us-2hd"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="BTk-kw-SSV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XJS-bE-riV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1787" y="739"/>
+            <point key="canvasLocation" x="-362" y="1063"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="GNR-TV-gse">
@@ -48,25 +84,25 @@
                     <view key="view" contentMode="scaleToFill" id="CQ9-QJ-iV3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.065003138030000004" green="0.3060643891" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="l3R-Ec-Vl2"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="bPm-E3-3LX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxc-Uo-5QW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-849" y="167"/>
+            <point key="canvasLocation" x="-362" y="146"/>
         </scene>
-        <!--Item 1-->
+        <!--Map-->
         <scene sceneID="nUl-fw-ke4">
             <objects>
-                <viewController id="y3l-je-N5U" sceneMemberID="viewController">
+                <viewController title="Map" id="y3l-je-N5U" customClass="MapViewController" customModule="quickBlackjack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="59E-ge-xzQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WQP-Km-c9H">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
@@ -77,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CFG-Ks-ubN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-849.27536231884062" y="-479.46428571428567"/>
+            <point key="canvasLocation" x="-362" y="-755"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="V23-oM-xLY">
@@ -96,7 +132,10 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Urp-IT-2VU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1770" y="-157"/>
+            <point key="canvasLocation" x="-2038" y="541"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splashimg.png" width="1080" height="1920"/>
+    </resources>
 </document>
