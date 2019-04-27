@@ -15,6 +15,10 @@ class AccountViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func close(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+
+    }
     
 
     /*

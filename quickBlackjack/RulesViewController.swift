@@ -16,7 +16,11 @@ class RulesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func close(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
 
+    }
+    
     /*
     // MARK: - Navigation
 
