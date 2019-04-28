@@ -11,6 +11,7 @@
 		9E1775F1226F93A1000E926C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1775F0226F93A1000E926C /* LaunchScreen.storyboard */; };
 		9E19296F2266786800CE8BAD /* SplashPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19296E2266786800CE8BAD /* SplashPageViewController.swift */; };
 		9E19297122667A4D00CE8BAD /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19297022667A4D00CE8BAD /* MapAnnotation.swift */; };
+		9E45DEC1227562D80088465A /* Unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E45DEC0227562D80088465A /* Unknown.png */; };
 		9E4CC216226FBFBE00D9E5AF /* cards.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E4CC215226FBFBD00D9E5AF /* cards.png */; };
 		9EB837852266831800BC0795 /* splashimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EB837842266831800BC0795 /* splashimg.png */; };
 		9EB837872266883D00BC0795 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB837862266883D00BC0795 /* RulesViewController.swift */; };
@@ -26,6 +27,7 @@
 		9E1775F0226F93A1000E926C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E19296E2266786800CE8BAD /* SplashPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPageViewController.swift; sourceTree = "<group>"; };
 		9E19297022667A4D00CE8BAD /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		9E45DEC0227562D80088465A /* Unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Unknown.png; sourceTree = "<group>"; };
 		9E4CC215226FBFBD00D9E5AF /* cards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cards.png; sourceTree = "<group>"; };
 		9EB837842266831800BC0795 /* splashimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashimg.png; sourceTree = "<group>"; };
 		9EB837862266883D00BC0795 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		9EC3DD1B225E72D0005D2D55 /* quickBlackjack */ = {
 			isa = PBXGroup;
 			children = (
+				9E45DEC0227562D80088465A /* Unknown.png */,
 				9EB837842266831800BC0795 /* splashimg.png */,
 				9E1775F0226F93A1000E926C /* LaunchScreen.storyboard */,
 				9EC3DD1C225E72D0005D2D55 /* AppDelegate.swift */,
@@ -145,6 +148,7 @@
 			files = (
 				9EB837852266831800BC0795 /* splashimg.png in Resources */,
 				9E1775EF226F9379000E926C /* Main.storyboard in Resources */,
+				9E45DEC1227562D80088465A /* Unknown.png in Resources */,
 				9E1775F1226F93A1000E926C /* LaunchScreen.storyboard in Resources */,
 				9EC3DD24225E72D1005D2D55 /* Assets.xcassets in Resources */,
 				9E4CC216226FBFBE00D9E5AF /* cards.png in Resources */,

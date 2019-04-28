@@ -52,7 +52,7 @@
                                 <rect key="frame" x="108" y="540" width="198" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="0YI-Y9-dFg" kind="presentation" id="LyI-7c-ljA"/>
+                                    <segue destination="0YI-Y9-dFg" kind="presentation" id="4Ns-Bh-jZC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09B-E2-TBZ" userLabel="rules">
@@ -103,10 +103,10 @@
             </objects>
             <point key="canvasLocation" x="-3802" y="1064"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="Yg1-YK-gJp">
             <objects>
-                <viewController id="djj-F9-HLu" customClass="MapViewController" customModule="quickBlackjack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Map" id="djj-F9-HLu" customClass="MapViewController" customModule="quickBlackjack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AzJ-yW-fOv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,7 +119,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gfG-tY-bhf"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ghX-hb-5Mw"/>
+                    <tabBarItem key="tabBarItem" title="Map" id="ghX-hb-5Mw"/>
+                    <connections>
+                        <outlet property="mapView" destination="iPQ-AK-CDk" id="UQQ-Lm-T05"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zsQ-gc-uBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,18 +131,32 @@
         <!--Item-->
         <scene sceneID="7JR-F7-8q1">
             <objects>
-                <viewController id="gZy-ZD-3pN" sceneMemberID="viewController">
+                <viewController id="gZy-ZD-3pN" customClass="GameViewController" customModule="quickBlackjack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NDc-4F-jNe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.1175853208" blue="0.1042221836" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blackjack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Myw-ln-gjQ">
+                                <rect key="frame" x="156" y="44" width="103" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pex-9q-7mW">
+                                <rect key="frame" x="335" y="44" width="59" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Unknown.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xjV-Us-2hd"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="BTk-kw-SSV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XJS-bE-riV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-362" y="1063"/>
+            <point key="canvasLocation" x="-362.31884057971018" y="1062.7232142857142"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="GNR-TV-gse">
@@ -178,6 +195,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Unknown.png" width="225" height="225"/>
         <image name="splashimg.png" width="1080" height="1920"/>
     </resources>
 </document>
