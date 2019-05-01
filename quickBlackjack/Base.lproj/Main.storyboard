@@ -473,11 +473,14 @@ Winnings:</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFj-b6-YI3">
-                                <rect key="frame" x="138" y="688" width="100" height="47"/>
+                                <rect key="frame" x="157" y="695" width="100" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" red="1" green="0.1175853208" blue="0.1042221836" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="logOutPressed:" destination="5Pi-lE-ih3" eventType="primaryActionTriggered" id="uu0-FL-t7U"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6rg-yr-08y">
                                 <rect key="frame" x="258.5" y="391" width="27" height="33"/>
@@ -497,14 +500,7 @@ Winnings:</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTN-h5-PtP">
-                                <rect key="frame" x="154" y="613" width="70" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKd-XM-6NC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKd-XM-6NC" userLabel="settings">
                                 <rect key="frame" x="356" y="79" width="38" height="38"/>
                                 <state key="normal" image="settings.png"/>
                                 <connections>
@@ -519,21 +515,30 @@ Winnings:</string>
                                     <action selector="backPressed:" destination="5Pi-lE-ih3" eventType="primaryActionTriggered" id="fYz-V4-c2f"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qi-Hj-y2b">
+                                <rect key="frame" x="176" y="627" width="62" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="savePressed:" destination="5Pi-lE-ih3" eventType="primaryActionTriggered" id="d3r-U5-Gn2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fFj-b6-YI3" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" constant="-19" id="1BJ-za-jhQ"/>
+                            <constraint firstItem="fFj-b6-YI3" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" id="4Y7-YO-5q7"/>
                             <constraint firstItem="dC8-5t-Icj" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" constant="65" id="9ie-3B-c8D"/>
                             <constraint firstItem="Nav-eX-xfR" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" constant="-107" id="AxM-6q-ai4"/>
                             <constraint firstItem="M8t-6s-cKe" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" constant="-108.5" id="CCD-Ab-QNR"/>
-                            <constraint firstItem="fFj-b6-YI3" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="263.5" id="CbZ-py-xVm"/>
                             <constraint firstItem="dC8-5t-Icj" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="31.5" id="CfS-Sz-Srr"/>
                             <constraint firstItem="7Us-p1-4eZ" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="-350" id="DK3-Ta-6BH"/>
                             <constraint firstItem="qHv-FJ-bB2" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" id="Dsu-dT-mRw"/>
                             <constraint firstItem="V0i-vS-wfv" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="-349.5" id="FH0-NT-GpY"/>
                             <constraint firstItem="oTK-T6-V3N" firstAttribute="top" secondItem="V0i-vS-wfv" secondAttribute="bottom" constant="16" id="Ipj-D4-1h5"/>
                             <constraint firstItem="qHv-FJ-bB2" firstAttribute="top" secondItem="oTK-T6-V3N" secondAttribute="bottom" constant="23" id="KX2-QQ-gMw"/>
+                            <constraint firstItem="2Qi-Hj-y2b" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" id="NCy-fd-F8h"/>
                             <constraint firstItem="Nav-eX-xfR" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="-39" id="NX1-uf-KZc"/>
+                            <constraint firstItem="fFj-b6-YI3" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="270.5" id="PBF-SU-zKu"/>
                             <constraint firstItem="oTK-T6-V3N" firstAttribute="top" secondItem="If7-zL-796" secondAttribute="top" constant="164" id="SL0-Pb-YYo"/>
                             <constraint firstItem="oTK-T6-V3N" firstAttribute="centerX" secondItem="qHv-FJ-bB2" secondAttribute="centerX" id="TYV-cV-D8B"/>
                             <constraint firstItem="V0i-vS-wfv" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" id="Vpf-7S-j6m"/>
@@ -547,12 +552,19 @@ Winnings:</string>
                             <constraint firstItem="Dxs-6W-d6t" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="104" id="iDM-bA-lkQ"/>
                             <constraint firstItem="6rg-yr-08y" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="-40.5" id="kbR-iA-mCC"/>
                             <constraint firstItem="jKd-XM-6NC" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="-350" id="ovT-yT-gHp"/>
+                            <constraint firstItem="2Qi-Hj-y2b" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="202.5" id="pt2-Ed-XGj"/>
                             <constraint firstItem="oTK-T6-V3N" firstAttribute="leading" secondItem="oDs-Ro-uDG" secondAttribute="leading" constant="138" id="qhn-4b-vO2"/>
                             <constraint firstItem="Dxs-6W-d6t" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" constant="-120.5" id="wmy-cO-R2d"/>
-                            <constraint firstItem="oTK-T6-V3N" firstAttribute="leading" secondItem="fFj-b6-YI3" secondAttribute="leading" id="xs9-vc-m69"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oDs-Ro-uDG"/>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="JRq-HS-lQx" id="sd6-1C-1Ig"/>
+                        <outlet property="firstName" destination="6rg-yr-08y" id="7Lc-MQ-prp"/>
+                        <outlet property="lastName" destination="dC8-5t-Icj" id="sKv-kH-wBC"/>
+                        <outlet property="userImage" destination="oTK-T6-V3N" id="nV1-qj-L1T"/>
+                        <outlet property="username" destination="qHv-FJ-bB2" id="lwl-Yn-uI2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7v-gk-8f6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

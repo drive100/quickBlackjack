@@ -10,6 +10,16 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    //editable fields
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var email: UITextField!
+    
+    //user image
+    @IBOutlet weak var userImage: UIImageView!
+    
+    //label
+    @IBOutlet weak var username: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,14 +30,10 @@ class ProfileViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func savePressed(_ sender: Any) {
     }
-    */
-
+    
+    @IBAction func logOutPressed(_ sender: UIButton) {
+    }
+    
 }

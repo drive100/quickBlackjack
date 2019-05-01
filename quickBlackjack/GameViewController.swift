@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GameViewController: UIViewController {
 
+    var audioPlayer: AVAudioPlayer?
+    var audioPlayer1: AVAudioPlayer?
+    //goes from 1 to 6 (ie imageview placements)
     var id = 1
     var suit = ""
-    
+    var set = ""
     var suits = ["clubs", "hearts", "diamonds", "spades"]
     
     @IBOutlet weak var payoutText: UILabel!
@@ -31,6 +35,16 @@ class GameViewController: UIViewController {
     //button functions
     
     @IBAction func betPressed(_ sender: UIButton) {
+        do {
+            if let fileURL = Bundle.main.path(forResource: "card", ofType: "wav") {
+                audioPlayer1 = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: fileURL))
+            } else {
+                print("No file with specified name exists")
+            }
+        } catch let error {
+            print("Can't play the audio file failed with an error \(error.localizedDescription)")
+        }
+        audioPlayer1?.play()
     }
     
     @IBAction func plusPressed(_ sender: UIButton) {
@@ -45,8 +59,20 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        do {
+            if let fileURL = Bundle.main.path(forResource: "casino", ofType: "mp3") {
+                audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: fileURL))
+            } else {
+                print("No file with specified name exists")
+            }
+        } catch let error {
+            print("Can't play the audio file failed with an error \(error.localizedDescription)")
+        }
+        audioPlayer?.play()
+        audioPlayer?.numberOfLoops = -1
+
         // Do any additional setup after loading the view.
-        var set = "png/" + String(id) + suits[0] + ".png"
+        set = "png/" + String(id) + suits[0] + ".png"
         bottomLeft.image =  UIImage(named:set)
         bottomMiddle.image = UIImage(named:"png/blank")
         bottomRight.image = UIImage(named:"png/blank")
@@ -59,6 +85,8 @@ class GameViewController: UIViewController {
     }
     
     func randomizer(){
+        id = Int.random(in: 1 ..< 14)
+        set = "png/" + String(id) + suits[0] + ".png"
         
     }
    
