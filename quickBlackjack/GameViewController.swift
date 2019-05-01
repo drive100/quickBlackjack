@@ -27,6 +27,8 @@ class GameViewController: UIViewController {
     var over21 = false
     var equal21 = false
     var totalWinnings = 0
+    var won = false
+    var tie = false
     
     //labels
     @IBOutlet weak var payoutText: UILabel!
@@ -97,18 +99,16 @@ class GameViewController: UIViewController {
         let alert = UIAlertController(title: "Game Over", message: "You went over 21! Click ok to start a new game", preferredStyle: .alert)
         
         let action1 = UIAlertAction(title: "Ok", style: .default)
-        {action in self.reset()}
+        {action in self.calculateWinLoss()}
         
         alert.addAction(action1)
         present(alert,animated: true, completion: nil)
         
         } else if (equal21){
-            totalWinnings = 3 * bet
-            TotalScoreText.text = String(totalWinnings)
             let alert = UIAlertController(title: "Blackjack!", message: "You won! You got 21! Won 3x your bet", preferredStyle: .alert)
             
             let action1 = UIAlertAction(title: "Ok", style: .default)
-            {action in self.reset()}
+            {action in self.calculateWinLoss()}
             
             alert.addAction(action1)
             present(alert,animated: true, completion: nil)
@@ -129,10 +129,11 @@ class GameViewController: UIViewController {
 
     
     @IBAction func FoldButtonPressed(_ sender: Any) {
+        won = false
         let alert = UIAlertController(title: "Fold?", message: "Are you sure you want to fold this game?", preferredStyle: .alert)
         
         let action1 = UIAlertAction(title: "Yes", style: .default)
-        {action in self.dealersHand()}
+        {action in self.calculateWinLoss()}
         
         let action2 =  UIAlertAction(title: "No", style: .default)
         
@@ -192,10 +193,12 @@ class GameViewController: UIViewController {
     func dealersHand(){
         let val = Int.random(in: 15 ..< 30)
         if (val == totalCardVal){
+            tie = true
+            won = true
             let alert = UIAlertController(title: "Tie!", message: "Your card value equals the dealers hand! \nDealers hand \(val)", preferredStyle: .alert)
             
             let action1 = UIAlertAction(title: "Ok", style: .default)
-            {action in self.reset()}
+            {action in self.calculateWinLoss()}
           
             alert.addAction(action1)
             present(alert,animated: true, completion: nil)
@@ -204,33 +207,58 @@ class GameViewController: UIViewController {
             let alert = UIAlertController(title: "You Lost!", message: "Your card value is less the dealers hand!\nDealers hand: \(val)", preferredStyle: .alert)
             
             let action1 = UIAlertAction(title: "Ok", style: .default)
-            {action in self.reset()}
+            {action in self.calculateWinLoss()}
             
             alert.addAction(action1)
             present(alert,animated: true, completion: nil)
         }
         else if (val < totalCardVal && val < 21){
-        
+            won = true
             let alert = UIAlertController(title: "You Won!", message: "Your card value is greater than the dealers hand! \nDealers hand: \(val)", preferredStyle: .alert)
             
             let action1 = UIAlertAction(title: "Ok", style: .default)
-            {action in self.reset()}
+            {action in self.calculateWinLoss()}
             
             alert.addAction(action1)
             present(alert,animated: true, completion: nil)
         }
         else if (val > 21){
+            won = true
             let alert = UIAlertController(title: "You Won!", message: "The Dealer went over 21! \nDealers hand: \(val)", preferredStyle: .alert)
             
             let action1 = UIAlertAction(title: "Ok", style: .default)
-            {action in self.reset()}
+            {action in self.calculateWinLoss()}
             
             alert.addAction(action1)
             present(alert,animated: true, completion: nil)
         }
     }
+    
+    func calculateWinLoss(){
+        if ((over21 || !won) && !equal21){
+            totalWinnings = totalWinnings - bet
+            TotalScoreText.text = String(totalWinnings)
+        }
+        else if (equal21){
+            totalWinnings = totalWinnings + (3*bet)
+            TotalScoreText.text = String(totalWinnings)
+        }
+        else if (won && !tie){
+            totalWinnings = totalWinnings + (2*bet)
+            TotalScoreText.text = String(totalWinnings)
+        }
+        else if (tie){
+            totalWinnings = totalWinnings + (bet)
+            TotalScoreText.text = String(totalWinnings)
+        }
+       
+        reset()
+    }
 
     func reset(){
+        bet = 0
+        won = false
+        tie = false
         over21 = false
         equal21 = false
         place_id = 0
