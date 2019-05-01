@@ -38,9 +38,7 @@ class GameViewController: UIViewController {
     
     @IBAction func minusPressed(_ sender: UIButton) {
     }
-    
-    @IBAction func playHandPressed(_ sender: UIButton) {
-    }
+
     
     @IBAction func FoldButtonPressed(_ sender: Any) {
     }
@@ -56,6 +54,8 @@ class GameViewController: UIViewController {
         topLeft.image = UIImage(named:"png/blank")
         topMiddle.image = UIImage(named:"png/blank")
         topRight.image = UIImage(named:"png/blank")
+        payoutText.text = "0"
+        TotalScoreText.text = "0"
     }
     
     func randomizer(){
