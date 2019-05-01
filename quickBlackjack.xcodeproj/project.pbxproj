@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9E16644C227959FA00E4F147 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E16644B227959FA00E4F147 /* back.png */; };
+		9E16644E22795B2500E4F147 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E16644D22795B2500E4F147 /* TabBarViewController.swift */; };
 		9E1775EF226F9379000E926C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1775EE226F9379000E926C /* Main.storyboard */; };
 		9E1775F1226F93A1000E926C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1775F0226F93A1000E926C /* LaunchScreen.storyboard */; };
 		9E19296F2266786800CE8BAD /* SplashPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19296E2266786800CE8BAD /* SplashPageViewController.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		63C33A5366F99FDC2356D2CD /* Pods_quickBlackjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quickBlackjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E16644B227959FA00E4F147 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		9E16644D22795B2500E4F147 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		9E1775EE226F9379000E926C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E1775F0226F93A1000E926C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E19296E2266786800CE8BAD /* SplashPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPageViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				9E4CC215226FBFBD00D9E5AF /* cards.png */,
 				9EC3DD1E225E72D0005D2D55 /* GameViewController.swift */,
 				9E1775EE226F9379000E926C /* Main.storyboard */,
+				9E16644D22795B2500E4F147 /* TabBarViewController.swift */,
 				9E28F60922769411005856D2 /* tabPic2.png */,
 				9EB837882266884C00BC0795 /* AccountViewController.swift */,
 				9E19296E2266786800CE8BAD /* SplashPageViewController.swift */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E16644E22795B2500E4F147 /* TabBarViewController.swift in Sources */,
 				9E19297122667A4D00CE8BAD /* MapAnnotation.swift in Sources */,
 				9E19296F2266786800CE8BAD /* SplashPageViewController.swift in Sources */,
 				9EB837892266884C00BC0795 /* AccountViewController.swift in Sources */,

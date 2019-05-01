@@ -536,10 +536,10 @@ Winnings:</string>
             </objects>
             <point key="canvasLocation" x="-362" y="146"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="V23-oM-xLY">
             <objects>
-                <tabBarController id="0YI-Y9-dFg" sceneMemberID="viewController">
+                <tabBarController id="0YI-Y9-dFg" customClass="TabBarViewController" customModule="quickBlackjack" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YXK-Cy-PB3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
