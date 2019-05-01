@@ -10,7 +10,17 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    var id = 1
+    var suit = ""
     
+    var suits = ["clubs", "hearts", "diamonds", "spades"]
+    
+    @IBOutlet weak var payoutText: UILabel!
+    
+    @IBOutlet weak var totalBetText: UILabel!
+    
+    @IBOutlet weak var TotalScoreText: UILabel!
+    //imageView connections
     @IBOutlet weak var topRight: UIImageView!
     @IBOutlet weak var topMiddle: UIImageView!
     @IBOutlet weak var topLeft: UIImageView!
@@ -18,11 +28,28 @@ class GameViewController: UIViewController {
     @IBOutlet weak var bottomLeft: UIImageView!
     @IBOutlet weak var bottomMiddle: UIImageView!
     
+    //button functions
+    
+    @IBAction func betPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func plusPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func minusPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func playHandPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func FoldButtonPressed(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        bottomLeft.image =  UIImage(named:"png/blank")
+        var set = "png/" + String(id) + suits[0] + ".png"
+        bottomLeft.image =  UIImage(named:set)
         bottomMiddle.image = UIImage(named:"png/blank")
         bottomRight.image = UIImage(named:"png/blank")
         
@@ -31,6 +58,9 @@ class GameViewController: UIViewController {
         topRight.image = UIImage(named:"png/blank")
     }
     
+    func randomizer(){
+        
+    }
    
 
 

@@ -171,6 +171,9 @@
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="plusPressed:" destination="gZy-ZD-3pN" eventType="primaryActionTriggered" id="aUG-mk-ifh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXF-Ry-2H3">
                                 <rect key="frame" x="352" y="597" width="30" height="30"/>
@@ -178,6 +181,9 @@
                                 <state key="normal" title="-">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="minusPressed:" destination="gZy-ZD-3pN" eventType="primaryActionTriggered" id="4op-FK-REW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payout:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqe-66-P4n">
                                 <rect key="frame" x="223" y="681" width="88.5" height="29"/>
@@ -210,6 +216,9 @@
                                 <state key="normal" title="Bet">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="betPressed:" destination="gZy-ZD-3pN" eventType="primaryActionTriggered" id="yIK-se-MgE"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nuz-O7-H4o">
                                 <rect key="frame" x="321" y="743" width="61" height="39"/>
@@ -219,29 +228,37 @@
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalBet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsa-Ja-4sL">
-                                <rect key="frame" x="312" y="555" width="74" height="27"/>
+                                <rect key="frame" x="312" y="560" width="74" height="27"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPY-9E-yFz">
-                                <rect key="frame" x="20" y="552" width="77" height="30"/>
-                                <state key="normal" title="Play Hand?">
+                                <rect key="frame" x="20" y="552" width="86" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Play Hand">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="playHandPressed:" destination="gZy-ZD-3pN" eventType="primaryActionTriggered" id="21A-Jx-wBe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grW-tO-Tov">
-                                <rect key="frame" x="37" y="590" width="19" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="37" y="595" width="22" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oo1-CH-yzE">
-                                <rect key="frame" x="28" y="619" width="37" height="30"/>
+                                <rect key="frame" x="23" y="627" width="50" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Fold?">
                                     <color key="titleColor" red="0.19697884709999999" green="0.78497779190000005" blue="0.18959403380000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="FoldButtonPressed:" destination="gZy-ZD-3pN" eventType="touchUpInside" id="weU-Gu-Hjz"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OMv-wW-uJ4">
                                 <rect key="frame" x="13" y="343" width="120" height="169"/>
@@ -324,12 +341,15 @@ Winnings:</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="Game" image="tabPic1.png" id="BTk-kw-SSV"/>
                     <connections>
+                        <outlet property="TotalScoreText" destination="Nuz-O7-H4o" id="hda-O3-I9r"/>
                         <outlet property="bottomLeft" destination="OMv-wW-uJ4" id="mKG-TF-BDX"/>
                         <outlet property="bottomMiddle" destination="nSW-4V-M7m" id="EOz-x4-B4T"/>
                         <outlet property="bottomRight" destination="t1z-SP-vJW" id="wka-Hm-VAz"/>
+                        <outlet property="payoutText" destination="Vc7-nR-83H" id="qyt-cH-9YG"/>
                         <outlet property="topLeft" destination="i2m-Nu-bC0" id="o4p-Ju-ZJW"/>
                         <outlet property="topMiddle" destination="aLE-4J-QO7" id="tia-Kv-ddA"/>
                         <outlet property="topRight" destination="Vch-iS-eEw" id="Ie9-si-qGd"/>
+                        <outlet property="totalBetText" destination="hsa-Ja-4sL" id="d2C-xw-Tmb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XJS-bE-riV" userLabel="First Responder" sceneMemberID="firstResponder"/>

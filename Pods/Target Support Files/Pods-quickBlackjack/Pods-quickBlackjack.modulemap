@@ -1,0 +1,6 @@
+framework module Pods_quickBlackjack {
+  umbrella header "Pods-quickBlackjack-umbrella.h"
+
+  export *
+  module * { export * }
+}
