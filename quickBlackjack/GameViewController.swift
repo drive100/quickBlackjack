@@ -19,6 +19,7 @@ class GameViewController: UIViewController {
     var suit_id = 0
     var set = ""
     var suits = ["clubs", "hearts", "diamonds", "spades"]
+    var bet = 0
     
     @IBOutlet weak var payoutText: UILabel!
     
@@ -76,9 +77,14 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func plusPressed(_ sender: UIButton) {
+        bet = bet + 1
+        totalBetText.text = String(bet)
     }
     
     @IBAction func minusPressed(_ sender: UIButton) {
+        bet = bet - 1
+        if bet < 0 {bet = 0}
+        totalBetText.text = String(bet)
     }
 
     

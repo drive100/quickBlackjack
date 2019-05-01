@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHI-h5-6jo">
-                                <rect key="frame" x="43" y="77" width="16" height="22"/>
+                                <rect key="frame" x="32.5" y="69.5" width="37.5" height="37.5"/>
                                 <state key="normal" image="back.png"/>
                                 <connections>
                                     <action selector="close:" destination="i39-Ig-4cM" eventType="primaryActionTriggered" id="gcK-mZ-and"/>
@@ -56,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLR-NL-HQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3821.739130434783" y="-697.09821428571422"/>
+            <point key="canvasLocation" x="-3823" y="2194"/>
         </scene>
         <!--Splash Page View Controller-->
         <scene sceneID="J0M-PT-sbY">
@@ -99,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tri-ah-DtB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3810.144927536232" y="145.98214285714286"/>
+            <point key="canvasLocation" x="-3822" y="540"/>
         </scene>
         <!--Rules View Controller-->
         <scene sceneID="0MX-QT-lyn">
@@ -168,7 +168,7 @@ If you get 21 points exactly on the deal, that is called a “blackjack.” If y
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDf-Rw-fgx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3802.898550724638" y="1063.3928571428571"/>
+            <point key="canvasLocation" x="-2117" y="1469"/>
         </scene>
         <!--Map-->
         <scene sceneID="Yg1-YK-gJp">
@@ -193,7 +193,7 @@ If you get 21 points exactly on the deal, that is called a “blackjack.” If y
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zsQ-gc-uBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1595.6521739130435" y="1738.3928571428571"/>
+            <point key="canvasLocation" x="-362" y="-733"/>
         </scene>
         <!--Game-->
         <scene sceneID="7JR-F7-8q1">
@@ -232,9 +232,6 @@ If you get 21 points exactly on the deal, that is called a “blackjack.” If y
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JC-5W-8oR">
                                 <rect key="frame" x="312" y="597" width="30" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="k5a-Jw-jys"/>
-                                </constraints>
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -253,18 +250,14 @@ If you get 21 points exactly on the deal, that is called a “blackjack.” If y
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payout:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqe-66-P4n">
-                                <rect key="frame" x="223" y="680" width="89" height="31"/>
+                                <rect key="frame" x="223" y="681" width="89" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vc7-nR-83H">
-                                <rect key="frame" x="321" y="676" width="61" height="39"/>
+                                <rect key="frame" x="330.5" y="686" width="42" height="20.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="gHR-N5-533"/>
-                                    <constraint firstAttribute="width" constant="61" id="yeE-cm-ahe"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -293,13 +286,6 @@ If you get 21 points exactly on the deal, that is called a “blackjack.” If y
                                     <action selector="betPressed:" destination="gZy-ZD-3pN" eventType="primaryActionTriggered" id="yIK-se-MgE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nuz-O7-H4o">
-                                <rect key="frame" x="321" y="743" width="61" height="39"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalBet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsa-Ja-4sL">
                                 <rect key="frame" x="312" y="560" width="74" height="27"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -320,7 +306,7 @@ If you get 21 points exactly on the deal, that is called a “blackjack.” If y
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GW2-Rz-OjZ">
-                                <rect key="frame" x="195" y="725" width="118" height="60"/>
+                                <rect key="frame" x="195" y="725" width="117.5" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="LjF-ta-JaU"/>
                                 </constraints>
@@ -351,58 +337,60 @@ Winnings:</string>
                                     <segue destination="80u-3i-7hu" kind="presentation" id="BGA-Sp-Eq2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nuz-O7-H4o">
+                                <rect key="frame" x="328" y="755" width="42" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.78497779187817263" green="0.17191939383555679" blue="0.1510452297257803" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="i2m-Nu-bC0" firstAttribute="bottom" secondItem="Vch-iS-eEw" secondAttribute="bottom" id="07o-E9-SBN"/>
-                            <constraint firstItem="Vc7-nR-83H" firstAttribute="leading" secondItem="Sqe-66-P4n" secondAttribute="trailing" constant="9" id="0EO-ln-kf8"/>
                             <constraint firstItem="Vch-iS-eEw" firstAttribute="leading" secondItem="aLE-4J-QO7" secondAttribute="trailing" constant="6" id="19A-k7-Cla"/>
-                            <constraint firstItem="Vc7-nR-83H" firstAttribute="top" secondItem="4JC-5W-8oR" secondAttribute="bottom" constant="49" id="6cb-i5-TeP"/>
-                            <constraint firstItem="Vc7-nR-83H" firstAttribute="trailing" secondItem="NXF-Ry-2H3" secondAttribute="trailing" id="85T-vn-noa"/>
-                            <constraint firstItem="xjV-Us-2hd" firstAttribute="bottom" secondItem="Nuz-O7-H4o" secondAttribute="bottom" constant="31" id="DPh-xm-1Jb"/>
                             <constraint firstItem="OMv-wW-uJ4" firstAttribute="bottom" secondItem="nSW-4V-M7m" secondAttribute="bottom" id="FMr-4e-4Bq"/>
-                            <constraint firstAttribute="bottom" secondItem="4JC-5W-8oR" secondAttribute="bottom" constant="269" id="Hmu-mn-PEB"/>
+                            <constraint firstItem="Vc7-nR-83H" firstAttribute="centerX" secondItem="NDc-4F-jNe" secondAttribute="centerX" constant="144.5" id="Hoe-Q8-nYo"/>
                             <constraint firstItem="aLE-4J-QO7" firstAttribute="leading" secondItem="i2m-Nu-bC0" secondAttribute="trailing" constant="8" symbolic="YES" id="IZZ-rv-eZF"/>
+                            <constraint firstItem="hsa-Ja-4sL" firstAttribute="centerY" secondItem="NDc-4F-jNe" secondAttribute="centerY" constant="125.5" id="JAI-Im-4iH"/>
                             <constraint firstItem="GW2-Rz-OjZ" firstAttribute="top" secondItem="Sqe-66-P4n" secondAttribute="bottom" constant="14" id="JBk-YD-JmL"/>
                             <constraint firstItem="Vch-iS-eEw" firstAttribute="trailing" secondItem="pex-9q-7mW" secondAttribute="trailing" constant="-8" id="K1J-W5-CzM"/>
                             <constraint firstItem="oQl-DU-4OA" firstAttribute="trailing" secondItem="nSW-4V-M7m" secondAttribute="trailing" id="KqV-O0-Ld6"/>
                             <constraint firstItem="nSW-4V-M7m" firstAttribute="centerX" secondItem="dpS-bz-sj9" secondAttribute="centerX" constant="-6" id="NXW-HX-seZ"/>
+                            <constraint firstItem="Nuz-O7-H4o" firstAttribute="centerX" secondItem="NDc-4F-jNe" secondAttribute="centerX" constant="142" id="Nzh-Xl-GeB"/>
                             <constraint firstItem="i2m-Nu-bC0" firstAttribute="bottom" secondItem="aLE-4J-QO7" secondAttribute="bottom" id="POu-ka-Xzy"/>
+                            <constraint firstItem="hsa-Ja-4sL" firstAttribute="centerX" secondItem="NDc-4F-jNe" secondAttribute="centerX" constant="142" id="Q8H-sL-IlR"/>
                             <constraint firstItem="Vch-iS-eEw" firstAttribute="top" secondItem="pex-9q-7mW" secondAttribute="bottom" constant="46" id="RVT-7C-HfE"/>
                             <constraint firstItem="dpS-bz-sj9" firstAttribute="centerX" secondItem="NDc-4F-jNe" secondAttribute="centerX" id="Rfl-Ru-MzK"/>
                             <constraint firstItem="oQl-DU-4OA" firstAttribute="leading" secondItem="oo1-CH-yzE" secondAttribute="leading" id="U3C-eS-j16"/>
-                            <constraint firstItem="Nuz-O7-H4o" firstAttribute="top" secondItem="Vc7-nR-83H" secondAttribute="bottom" constant="28" id="U7i-H9-pgP"/>
                             <constraint firstItem="pex-9q-7mW" firstAttribute="leading" secondItem="xjV-Us-2hd" secondAttribute="leading" constant="335" id="VoC-Jo-Baz"/>
                             <constraint firstItem="xjV-Us-2hd" firstAttribute="trailing" secondItem="t1z-SP-vJW" secondAttribute="trailing" constant="27" id="Wd9-6J-ERI"/>
                             <constraint firstItem="oo1-CH-yzE" firstAttribute="top" secondItem="oQl-DU-4OA" secondAttribute="bottom" constant="21" id="X9L-lp-95L"/>
                             <constraint firstItem="oQl-DU-4OA" firstAttribute="leading" secondItem="nSW-4V-M7m" secondAttribute="leading" id="XQG-Yt-k9Q"/>
-                            <constraint firstItem="Nuz-O7-H4o" firstAttribute="trailing" secondItem="Vc7-nR-83H" secondAttribute="trailing" id="Xez-7f-ZIg"/>
                             <constraint firstItem="Sqe-66-P4n" firstAttribute="leading" secondItem="xjV-Us-2hd" secondAttribute="leading" constant="223" id="YdV-To-lyZ"/>
+                            <constraint firstItem="Nuz-O7-H4o" firstAttribute="centerY" secondItem="NDc-4F-jNe" secondAttribute="centerY" constant="317.25" id="agy-Th-NPw"/>
                             <constraint firstItem="i2m-Nu-bC0" firstAttribute="leading" secondItem="xjV-Us-2hd" secondAttribute="leading" constant="13" id="bHa-rP-Dqn"/>
                             <constraint firstItem="oQl-DU-4OA" firstAttribute="top" secondItem="nSW-4V-M7m" secondAttribute="bottom" constant="48" id="bev-DE-wcu"/>
-                            <constraint firstItem="Nuz-O7-H4o" firstAttribute="leading" secondItem="GW2-Rz-OjZ" secondAttribute="trailing" constant="8" symbolic="YES" id="czt-mW-5Kc"/>
-                            <constraint firstItem="hsa-Ja-4sL" firstAttribute="trailing" secondItem="Vch-iS-eEw" secondAttribute="trailing" id="eFp-k8-hPV"/>
                             <constraint firstItem="nSW-4V-M7m" firstAttribute="bottom" secondItem="t1z-SP-vJW" secondAttribute="bottom" id="fz9-8A-NI1"/>
                             <constraint firstItem="pex-9q-7mW" firstAttribute="trailing" secondItem="NDc-4F-jNe" secondAttribute="trailingMargin" id="g4g-wf-2xU"/>
                             <constraint firstItem="pex-9q-7mW" firstAttribute="top" secondItem="xjV-Us-2hd" secondAttribute="top" id="g8x-Ad-TCP"/>
-                            <constraint firstItem="hsa-Ja-4sL" firstAttribute="leading" secondItem="4JC-5W-8oR" secondAttribute="leading" id="gFC-L3-eXH"/>
                             <constraint firstItem="dpS-bz-sj9" firstAttribute="centerY" secondItem="NDc-4F-jNe" secondAttribute="centerY" id="gVs-Wb-3Lq"/>
                             <constraint firstItem="i2m-Nu-bC0" firstAttribute="top" secondItem="aLE-4J-QO7" secondAttribute="top" id="gs5-0Z-9H0"/>
                             <constraint firstItem="OMv-wW-uJ4" firstAttribute="top" secondItem="nSW-4V-M7m" secondAttribute="top" id="hND-uL-k17"/>
                             <constraint firstItem="t1z-SP-vJW" firstAttribute="leading" secondItem="nSW-4V-M7m" secondAttribute="trailing" constant="6" id="hRF-YJ-TuP"/>
                             <constraint firstItem="oQl-DU-4OA" firstAttribute="trailing" secondItem="oo1-CH-yzE" secondAttribute="trailing" id="hqM-Q6-inU"/>
-                            <constraint firstItem="NXF-Ry-2H3" firstAttribute="baseline" secondItem="4JC-5W-8oR" secondAttribute="baseline" id="ir8-Kl-fkl"/>
+                            <constraint firstItem="4JC-5W-8oR" firstAttribute="centerY" secondItem="NDc-4F-jNe" secondAttribute="centerY" constant="164" id="iqe-ez-4Wz"/>
                             <constraint firstItem="nSW-4V-M7m" firstAttribute="top" secondItem="t1z-SP-vJW" secondAttribute="top" id="js0-GK-7uX"/>
+                            <constraint firstItem="NXF-Ry-2H3" firstAttribute="centerY" secondItem="NDc-4F-jNe" secondAttribute="centerY" constant="164" id="mfW-rk-PKU"/>
+                            <constraint firstItem="4JC-5W-8oR" firstAttribute="centerX" secondItem="NDc-4F-jNe" secondAttribute="centerX" constant="120" id="nNi-1p-yqI"/>
                             <constraint firstItem="GW2-Rz-OjZ" firstAttribute="leading" secondItem="xjV-Us-2hd" secondAttribute="leading" constant="195" id="nuO-nC-2YH"/>
-                            <constraint firstItem="Vc7-nR-83H" firstAttribute="centerY" secondItem="Sqe-66-P4n" secondAttribute="centerY" id="rDT-jf-O7n"/>
                             <constraint firstItem="i2m-Nu-bC0" firstAttribute="top" secondItem="Vch-iS-eEw" secondAttribute="top" id="rEL-yr-t2K"/>
+                            <constraint firstItem="Vc7-nR-83H" firstAttribute="centerY" secondItem="NDc-4F-jNe" secondAttribute="centerY" constant="248" id="rmY-98-PN8"/>
                             <constraint firstItem="OMv-wW-uJ4" firstAttribute="trailing" secondItem="i2m-Nu-bC0" secondAttribute="trailing" id="sGf-ug-Thj"/>
                             <constraint firstItem="12t-yx-Ylj" firstAttribute="centerY" secondItem="NDc-4F-jNe" secondAttribute="centerY" constant="-375.5" id="tKG-88-6xs"/>
                             <constraint firstItem="xjV-Us-2hd" firstAttribute="bottom" secondItem="GW2-Rz-OjZ" secondAttribute="bottom" constant="28" id="u0X-j2-zXJ"/>
-                            <constraint firstItem="Nuz-O7-H4o" firstAttribute="leading" secondItem="Vc7-nR-83H" secondAttribute="leading" id="vH0-cK-4K8"/>
-                            <constraint firstItem="hsa-Ja-4sL" firstAttribute="top" secondItem="oQl-DU-4OA" secondAttribute="top" id="vLV-b1-V40"/>
+                            <constraint firstItem="NXF-Ry-2H3" firstAttribute="centerX" secondItem="NDc-4F-jNe" secondAttribute="centerX" constant="160" id="uzq-sA-TtT"/>
                             <constraint firstItem="12t-yx-Ylj" firstAttribute="centerX" secondItem="NDc-4F-jNe" secondAttribute="centerX" constant="-149" id="vkW-mk-wvU"/>
-                            <constraint firstItem="NXF-Ry-2H3" firstAttribute="baseline" secondItem="4JC-5W-8oR" secondAttribute="firstBaseline" id="wnD-Lz-pZV"/>
                             <constraint firstItem="OMv-wW-uJ4" firstAttribute="leading" secondItem="i2m-Nu-bC0" secondAttribute="leading" id="xAM-7J-jXI"/>
                             <constraint firstItem="OMv-wW-uJ4" firstAttribute="top" secondItem="i2m-Nu-bC0" secondAttribute="bottom" constant="8" symbolic="YES" id="zuT-T2-crl"/>
                         </constraints>
@@ -568,7 +556,7 @@ Winnings:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7v-gk-8f6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="665.21739130434787" y="1074.7767857142856"/>
+            <point key="canvasLocation" x="-362" y="2194"/>
         </scene>
         <!--Leaderboard-->
         <scene sceneID="GNR-TV-gse">
@@ -622,7 +610,7 @@ Winnings:</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Urp-IT-2VU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2038" y="541"/>
+            <point key="canvasLocation" x="-2116" y="489"/>
         </scene>
     </scenes>
     <resources>
@@ -637,7 +625,7 @@ Winnings:</string>
         <image name="tabPic3.png" width="22.5" height="22.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BGA-Sp-Eq2"/>
+        <segue reference="Gum-Zf-elc"/>
         <segue reference="mut-fI-BPd"/>
     </inferredMetricsTieBreakers>
 </document>
