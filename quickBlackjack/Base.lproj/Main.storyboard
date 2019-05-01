@@ -18,14 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHI-h5-6jo">
-                                <rect key="frame" x="72" y="103" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHI-h5-6jo">
+                                <rect key="frame" x="32" y="69" width="38" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" image="back.png"/>
                                 <connections>
                                     <action selector="close:" destination="i39-Ig-4cM" eventType="primaryActionTriggered" id="gcK-mZ-and"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x06-hx-NA1">
+                                <rect key="frame" x="126" y="52" width="162" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4xO-LO-Erw"/>
@@ -86,10 +93,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNG-TY-5jD">
-                                <rect key="frame" x="174" y="103" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNG-TY-5jD">
+                                <rect key="frame" x="20" y="62" width="53" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" image="back.png"/>
                                 <connections>
                                     <action selector="close:" destination="80u-3i-7hu" eventType="primaryActionTriggered" id="pRG-vW-Hy7"/>
                                 </connections>
@@ -101,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDf-Rw-fgx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3802" y="1064"/>
+            <point key="canvasLocation" x="-3802.898550724638" y="1063.3928571428571"/>
         </scene>
         <!--Map-->
         <scene sceneID="Yg1-YK-gJp">
@@ -436,6 +443,7 @@ Winnings:</string>
     </scenes>
     <resources>
         <image name="Unknown.png" width="225" height="225"/>
+        <image name="back.png" width="37.5" height="37.5"/>
         <image name="bck.jpg" width="1399.6800537109375" height="979.91998291015625"/>
         <image name="splashimg.png" width="1080" height="1920"/>
         <image name="tabPic1.png" width="18" height="18"/>
