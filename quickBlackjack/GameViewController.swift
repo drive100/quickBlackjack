@@ -14,8 +14,9 @@ class GameViewController: UIViewController {
     var audioPlayer: AVAudioPlayer?
     var audioPlayer1: AVAudioPlayer?
     //goes from 1 to 6 (ie imageview placements)
-    var id = 1
-    var suit = ""
+    var place_id = 1 //starting bottomleft
+    var value_id = 1
+    var suit_id = 0
     var set = ""
     var suits = ["clubs", "hearts", "diamonds", "spades"]
     
@@ -35,6 +36,32 @@ class GameViewController: UIViewController {
     //button functions
     
     @IBAction func betPressed(_ sender: UIButton) {
+        let newCard = randomizer()
+        switch(place_id){
+        case 1:
+            bottomLeft.image =  UIImage(named:newCard)
+            break
+        case 2:
+            bottomMiddle.image =  UIImage(named:newCard)
+            break
+        case 3:
+            bottomRight.image = UIImage(named:newCard)
+            break
+        case 4:
+            topLeft.image = UIImage(named:newCard)
+            break
+        case 5:
+            topMiddle.image = UIImage(named:newCard)
+            break
+        case 6:
+            topRight.image = UIImage(named:newCard)
+            break
+        default:
+            break
+        }
+        place_id = place_id + 1
+        if(place_id > 6){place_id = 1}
+        
         do {
             if let fileURL = Bundle.main.path(forResource: "card", ofType: "wav") {
                 audioPlayer1 = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: fileURL))
@@ -45,6 +72,7 @@ class GameViewController: UIViewController {
             print("Can't play the audio file failed with an error \(error.localizedDescription)")
         }
         audioPlayer1?.play()
+        
     }
     
     @IBAction func plusPressed(_ sender: UIButton) {
@@ -72,8 +100,8 @@ class GameViewController: UIViewController {
         audioPlayer?.numberOfLoops = -1
 
         // Do any additional setup after loading the view.
-        set = "png/" + String(id) + suits[0] + ".png"
-        bottomLeft.image =  UIImage(named:set)
+        set = "png/" + String(value_id) + suits[0] + ".png"
+        bottomLeft.image =  UIImage(named:"png/blank")
         bottomMiddle.image = UIImage(named:"png/blank")
         bottomRight.image = UIImage(named:"png/blank")
         
@@ -84,10 +112,12 @@ class GameViewController: UIViewController {
         TotalScoreText.text = "0"
     }
     
-    func randomizer(){
-        id = Int.random(in: 1 ..< 14)
-        set = "png/" + String(id) + suits[0] + ".png"
+    func randomizer() -> String {
+        value_id = Int.random(in: 1 ..< 14)
+        suit_id = Int.random(in: 0 ..< 4)
+        set = "png/" + String(value_id) + suits[suit_id] + ".png"
         
+        return set
     }
    
 
