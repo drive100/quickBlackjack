@@ -21,11 +21,13 @@ class GameViewController: UIViewController {
     var suits = ["clubs", "hearts", "diamonds", "spades"]
     var bet = 0
     
+    
+    //labels
     @IBOutlet weak var payoutText: UILabel!
-    
     @IBOutlet weak var totalBetText: UILabel!
-    
     @IBOutlet weak var TotalScoreText: UILabel!
+    @IBOutlet weak var totalValue: UILabel!
+    
     //imageView connections
     @IBOutlet weak var topRight: UIImageView!
     @IBOutlet weak var topMiddle: UIImageView!
@@ -36,6 +38,8 @@ class GameViewController: UIViewController {
     
     //button functions
     
+    @IBAction func stayPressed(_ sender: Any) {
+    }
     @IBAction func betPressed(_ sender: UIButton) {
         let newCard = randomizer()
         switch(place_id){
@@ -105,8 +109,7 @@ class GameViewController: UIViewController {
         audioPlayer?.play()
         audioPlayer?.numberOfLoops = -1
 
-        // Do any additional setup after loading the view.
-        set = "png/" + String(value_id) + suits[0] + ".png"
+        
         bottomLeft.image =  UIImage(named:"png/blank")
         bottomMiddle.image = UIImage(named:"png/blank")
         bottomRight.image = UIImage(named:"png/blank")
@@ -116,6 +119,8 @@ class GameViewController: UIViewController {
         topRight.image = UIImage(named:"png/blank")
         payoutText.text = "0"
         TotalScoreText.text = "0"
+        totalBetText.text = "0"
+        totalValue.text =  "0"
     }
     
     func randomizer() -> String {
