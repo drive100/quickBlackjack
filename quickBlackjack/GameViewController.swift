@@ -11,16 +11,22 @@ import AVFoundation
 
 class GameViewController: UIViewController {
 
+    
+    //variables
     var audioPlayer: AVAudioPlayer?
     var audioPlayer1: AVAudioPlayer?
+    
     //goes from 1 to 6 (ie imageview placements)
-    var place_id = 1 //starting bottomleft
+    var place_id = 0 //starting bottomleft
     var value_id = 1
     var suit_id = 0
     var set = ""
     var suits = ["clubs", "hearts", "diamonds", "spades"]
     var bet = 0
-    
+    var totalCardVal = 0
+    var over21 = false
+    var equal21 = false
+    var totalWinnings = 0
     
     //labels
     @IBOutlet weak var payoutText: UILabel!
@@ -39,6 +45,16 @@ class GameViewController: UIViewController {
     //button functions
     
     @IBAction func stayPressed(_ sender: Any) {
+        let alert = UIAlertController(title: "Stay?", message: "Are you sure you want to stay with this hand?", preferredStyle: .alert)
+        
+        let action1 = UIAlertAction(title: "Yes", style: .default)
+        {action in self.dealersHand()}
+        
+        let action2 =  UIAlertAction(title: "No", style: .default)
+        
+        alert.addAction(action1)
+        alert.addAction(action2)
+        present(alert,animated: true, completion: nil)
     }
     @IBAction func betPressed(_ sender: UIButton) {
         let newCard = randomizer()
@@ -64,8 +80,7 @@ class GameViewController: UIViewController {
         default:
             break
         }
-        place_id = place_id + 1
-        if(place_id > 6){place_id = 1}
+       
         
         do {
             if let fileURL = Bundle.main.path(forResource: "card", ofType: "wav") {
@@ -78,6 +93,27 @@ class GameViewController: UIViewController {
         }
         audioPlayer1?.play()
         
+        if (over21){
+        let alert = UIAlertController(title: "Game Over", message: "You went over 21! Click ok to start a new game", preferredStyle: .alert)
+        
+        let action1 = UIAlertAction(title: "Ok", style: .default)
+        {action in self.reset()}
+        
+        alert.addAction(action1)
+        present(alert,animated: true, completion: nil)
+        
+        } else if (equal21){
+            totalWinnings = 3 * bet
+            TotalScoreText.text = String(totalWinnings)
+            let alert = UIAlertController(title: "Blackjack!", message: "You won! You got 21! Won 3x your bet", preferredStyle: .alert)
+            
+            let action1 = UIAlertAction(title: "Ok", style: .default)
+            {action in self.reset()}
+            
+            alert.addAction(action1)
+            present(alert,animated: true, completion: nil)
+            
+        }
     }
     
     @IBAction func plusPressed(_ sender: UIButton) {
@@ -93,6 +129,17 @@ class GameViewController: UIViewController {
 
     
     @IBAction func FoldButtonPressed(_ sender: Any) {
+        let alert = UIAlertController(title: "Fold?", message: "Are you sure you want to fold this game?", preferredStyle: .alert)
+        
+        let action1 = UIAlertAction(title: "Yes", style: .default)
+        {action in self.dealersHand()}
+        
+        let action2 =  UIAlertAction(title: "No", style: .default)
+        
+        alert.addAction(action1)
+        alert.addAction(action2)
+        present(alert,animated: true, completion: nil)
+        
     }
     
     override func viewDidLoad() {
@@ -109,8 +156,88 @@ class GameViewController: UIViewController {
         audioPlayer?.play()
         audioPlayer?.numberOfLoops = -1
 
+        totalValue.text =  "0"
+        payoutText.text = "0"
+        TotalScoreText.text = "0"
+        totalBetText.text = "0"
         
-        bottomLeft.image =  UIImage(named:"png/blank")
+        let tmp = randomizer()
+        bottomLeft.image =  UIImage(named:tmp)
+        bottomMiddle.image = UIImage(named:"png/blank")
+        bottomRight.image = UIImage(named:"png/blank")
+        
+        topLeft.image = UIImage(named:"png/blank")
+        topMiddle.image = UIImage(named:"png/blank")
+        topRight.image = UIImage(named:"png/blank")
+        
+    }
+    
+    func randomizer() -> String {
+        place_id = place_id + 1
+        if(place_id > 6){place_id = 1}
+        value_id = Int.random(in: 1 ..< 14)
+        suit_id = Int.random(in: 0 ..< 4)
+        set = "png/" + String(value_id) + suits[suit_id] + ".png"
+        
+        var tmp = value_id
+        if(tmp >= 10){ tmp = 10}
+        totalCardVal = totalCardVal + tmp
+        totalValue.text = String(totalCardVal)
+
+        if (totalCardVal > 21){over21 = true}
+        else if (totalCardVal == 21){equal21 = true}
+        return set
+    }
+    
+    func dealersHand(){
+        let val = Int.random(in: 15 ..< 30)
+        if (val == totalCardVal){
+            let alert = UIAlertController(title: "Tie!", message: "Your card value equals the dealers hand! \nDealers hand \(val)", preferredStyle: .alert)
+            
+            let action1 = UIAlertAction(title: "Ok", style: .default)
+            {action in self.reset()}
+          
+            alert.addAction(action1)
+            present(alert,animated: true, completion: nil)
+        }
+        else if (val > totalCardVal && val < 21){
+            let alert = UIAlertController(title: "You Lost!", message: "Your card value is less the dealers hand!\nDealers hand: \(val)", preferredStyle: .alert)
+            
+            let action1 = UIAlertAction(title: "Ok", style: .default)
+            {action in self.reset()}
+            
+            alert.addAction(action1)
+            present(alert,animated: true, completion: nil)
+        }
+        else if (val < totalCardVal && val < 21){
+        
+            let alert = UIAlertController(title: "You Won!", message: "Your card value is greater than the dealers hand! \nDealers hand: \(val)", preferredStyle: .alert)
+            
+            let action1 = UIAlertAction(title: "Ok", style: .default)
+            {action in self.reset()}
+            
+            alert.addAction(action1)
+            present(alert,animated: true, completion: nil)
+        }
+        else if (val > 21){
+            let alert = UIAlertController(title: "You Won!", message: "The Dealer went over 21! \nDealers hand: \(val)", preferredStyle: .alert)
+            
+            let action1 = UIAlertAction(title: "Ok", style: .default)
+            {action in self.reset()}
+            
+            alert.addAction(action1)
+            present(alert,animated: true, completion: nil)
+        }
+    }
+
+    func reset(){
+        over21 = false
+        equal21 = false
+        place_id = 0
+        totalCardVal=0
+        totalValue.text = "0"
+        let tmp = randomizer()
+        bottomLeft.image =  UIImage(named:tmp)
         bottomMiddle.image = UIImage(named:"png/blank")
         bottomRight.image = UIImage(named:"png/blank")
         
@@ -118,20 +245,8 @@ class GameViewController: UIViewController {
         topMiddle.image = UIImage(named:"png/blank")
         topRight.image = UIImage(named:"png/blank")
         payoutText.text = "0"
-        TotalScoreText.text = "0"
         totalBetText.text = "0"
-        totalValue.text =  "0"
-    }
-    
-    func randomizer() -> String {
-        value_id = Int.random(in: 1 ..< 14)
-        suit_id = Int.random(in: 0 ..< 4)
-        set = "png/" + String(value_id) + suits[suit_id] + ".png"
         
-        return set
     }
-   
-
-
 }
 

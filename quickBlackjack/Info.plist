@@ -49,5 +49,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationUsageDescription</key>
+	<string>Location needed to find nearby users</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>quickBlackjack needs location to see nearby users</string>
 </dict>
 </plist>

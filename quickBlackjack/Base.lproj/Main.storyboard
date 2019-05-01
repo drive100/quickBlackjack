@@ -127,7 +127,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="522" id="U0N-PC-j75"/>
                                 </constraints>
-                                <mutableString key="text">At the beginning of each game, a card will be dealt and you get can set your bet. When bet button is clicked, the next card is dealt and you can keep or increase your current bet, or give up and click "fold".  
+                                <string key="text">At the beginning of each game, a card will be dealt and you get can set your bet. When bet button is clicked, the next card is dealt and you can keep or increase your current bet, or give up and click "fold".  
 
 You can keep betting (ie. drawing more cards) to get as close to 21 as possible, if you dont want to draw another card, you click the "Stay" button. 
 
@@ -137,7 +137,7 @@ Once the player clicks "stay" or "Fold" or goes over 21, the computer(dealer) wi
 
 If you get 21 points exactly on the deal, that is called a “blackjack.” If you get a blackjack you win 3x your bet
 
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
