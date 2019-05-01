@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9E16644C227959FA00E4F147 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E16644B227959FA00E4F147 /* back.png */; };
 		9E16644E22795B2500E4F147 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E16644D22795B2500E4F147 /* TabBarViewController.swift */; };
+		9E16645022795CBE00E4F147 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E16644F22795CBD00E4F147 /* settings.png */; };
+		9E16645222795DDC00E4F147 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E16645122795DDC00E4F147 /* ProfileViewController.swift */; };
+		9E166454227960F700E4F147 /* Blackjack-values.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E166453227960F600E4F147 /* Blackjack-values.png */; };
 		9E1775EF226F9379000E926C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1775EE226F9379000E926C /* Main.storyboard */; };
 		9E1775F1226F93A1000E926C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1775F0226F93A1000E926C /* LaunchScreen.storyboard */; };
 		9E19296F2266786800CE8BAD /* SplashPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19296E2266786800CE8BAD /* SplashPageViewController.swift */; };
@@ -23,7 +26,7 @@
 		9E6405FB2278FE9B0060DB50 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E6405FA2278FE9B0060DB50 /* GoogleService-Info.plist */; };
 		9EB837852266831800BC0795 /* splashimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EB837842266831800BC0795 /* splashimg.png */; };
 		9EB837872266883D00BC0795 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB837862266883D00BC0795 /* RulesViewController.swift */; };
-		9EB837892266884C00BC0795 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB837882266884C00BC0795 /* AccountViewController.swift */; };
+		9EB837892266884C00BC0795 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB837882266884C00BC0795 /* SettingsViewController.swift */; };
 		9EC3DD1D225E72D0005D2D55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC3DD1C225E72D0005D2D55 /* AppDelegate.swift */; };
 		9EC3DD1F225E72D0005D2D55 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC3DD1E225E72D0005D2D55 /* GameViewController.swift */; };
 		9EC3DD24225E72D1005D2D55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EC3DD23225E72D1005D2D55 /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 		63C33A5366F99FDC2356D2CD /* Pods_quickBlackjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quickBlackjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E16644B227959FA00E4F147 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		9E16644D22795B2500E4F147 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		9E16644F22795CBD00E4F147 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		9E16645122795DDC00E4F147 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9E166453227960F600E4F147 /* Blackjack-values.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blackjack-values.png"; sourceTree = "<group>"; };
 		9E1775EE226F9379000E926C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E1775F0226F93A1000E926C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E19296E2266786800CE8BAD /* SplashPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPageViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +55,7 @@
 		9E6405FA2278FE9B0060DB50 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9EB837842266831800BC0795 /* splashimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashimg.png; sourceTree = "<group>"; };
 		9EB837862266883D00BC0795 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
-		9EB837882266884C00BC0795 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		9EB837882266884C00BC0795 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9EC3DD19225E72D0005D2D55 /* quickBlackjack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quickBlackjack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC3DD1C225E72D0005D2D55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EC3DD1E225E72D0005D2D55 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +107,8 @@
 		9EC3DD1B225E72D0005D2D55 /* quickBlackjack */ = {
 			isa = PBXGroup;
 			children = (
+				9E166453227960F600E4F147 /* Blackjack-values.png */,
+				9E16644F22795CBD00E4F147 /* settings.png */,
 				9E16644B227959FA00E4F147 /* back.png */,
 				9E45DEC422764C3E0088465A /* png */,
 				9E45DEC0227562D80088465A /* Unknown.png */,
@@ -110,9 +118,10 @@
 				9E4CC215226FBFBD00D9E5AF /* cards.png */,
 				9EC3DD1E225E72D0005D2D55 /* GameViewController.swift */,
 				9E1775EE226F9379000E926C /* Main.storyboard */,
+				9E16645122795DDC00E4F147 /* ProfileViewController.swift */,
 				9E16644D22795B2500E4F147 /* TabBarViewController.swift */,
 				9E28F60922769411005856D2 /* tabPic2.png */,
-				9EB837882266884C00BC0795 /* AccountViewController.swift */,
+				9EB837882266884C00BC0795 /* SettingsViewController.swift */,
 				9E19296E2266786800CE8BAD /* SplashPageViewController.swift */,
 				9E6405FA2278FE9B0060DB50 /* GoogleService-Info.plist */,
 				9E28F6052276939B005856D2 /* tabPic1.png */,
@@ -202,8 +211,10 @@
 				9E1775EF226F9379000E926C /* Main.storyboard in Resources */,
 				9E45DEC1227562D80088465A /* Unknown.png in Resources */,
 				9E6405FB2278FE9B0060DB50 /* GoogleService-Info.plist in Resources */,
+				9E166454227960F700E4F147 /* Blackjack-values.png in Resources */,
 				9E16644C227959FA00E4F147 /* back.png in Resources */,
 				9E1775F1226F93A1000E926C /* LaunchScreen.storyboard in Resources */,
+				9E16645022795CBE00E4F147 /* settings.png in Resources */,
 				9E28F60A22769412005856D2 /* tabPic2.png in Resources */,
 				9EC3DD24225E72D1005D2D55 /* Assets.xcassets in Resources */,
 				9E4CC216226FBFBE00D9E5AF /* cards.png in Resources */,
@@ -271,9 +282,10 @@
 				9E16644E22795B2500E4F147 /* TabBarViewController.swift in Sources */,
 				9E19297122667A4D00CE8BAD /* MapAnnotation.swift in Sources */,
 				9E19296F2266786800CE8BAD /* SplashPageViewController.swift in Sources */,
-				9EB837892266884C00BC0795 /* AccountViewController.swift in Sources */,
+				9EB837892266884C00BC0795 /* SettingsViewController.swift in Sources */,
 				9EC3DD1F225E72D0005D2D55 /* GameViewController.swift in Sources */,
 				9EC3DD2F225E7552005D2D55 /* MapViewController.swift in Sources */,
+				9E16645222795DDC00E4F147 /* ProfileViewController.swift in Sources */,
 				9EB837872266883D00BC0795 /* RulesViewController.swift in Sources */,
 				9EC3DD1D225E72D0005D2D55 /* AppDelegate.swift in Sources */,
 			);

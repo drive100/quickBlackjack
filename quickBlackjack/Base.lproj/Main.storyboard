@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Account View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="5PL-t2-c6U">
             <objects>
-                <viewController id="i39-Ig-4cM" customClass="AccountViewController" customModule="quickBlackjack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="i39-Ig-4cM" customClass="SettingsViewController" customModule="quickBlackjack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5va-ox-WxK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHI-h5-6jo">
-                                <rect key="frame" x="32" y="69" width="38" height="38"/>
+                                <rect key="frame" x="43" y="77" width="16" height="22"/>
                                 <state key="normal" image="back.png"/>
                                 <connections>
                                     <action selector="close:" destination="i39-Ig-4cM" eventType="primaryActionTriggered" id="gcK-mZ-and"/>
@@ -110,7 +110,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNG-TY-5jD">
-                                <rect key="frame" x="28" y="62" width="37.5" height="38"/>
+                                <rect key="frame" x="27.5" y="62" width="38" height="38"/>
                                 <state key="normal" image="back.png"/>
                                 <connections>
                                     <action selector="close:" destination="80u-3i-7hu" eventType="primaryActionTriggered" id="pRG-vW-Hy7"/>
@@ -122,13 +122,46 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFL-Y5-xKX">
+                                <rect key="frame" x="20" y="340" width="374" height="522"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="522" id="U0N-PC-j75"/>
+                                </constraints>
+                                <mutableString key="text">At the beginning of each game, a card will be dealt and you get can set your bet. When bet button is clicked, the next card is dealt and you can keep or increase your current bet, or give up and click "fold".  
+
+You can keep betting (ie. drawing more cards) to get as close to 21 as possible, if you dont want to draw another card, you click the "Stay" button. 
+
+Once the player clicks "stay" or "Fold" or goes over 21, the computer(dealer) will reveal the value of their cards:
+- if the dealer is under 21 but higher than the player, the player loses
+-if the dealer is over 21 or lower value than the player's card, the player wins 2x their bet
+
+If you get 21 points exactly on the deal, that is called a “blackjack.” If you get a blackjack you win 3x your bet
+
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blackjack-values.png" translatesAutoresizingMaskIntoConstraints="NO" id="H83-Gg-shR">
+                                <rect key="frame" x="0.0" y="108" width="414" height="224"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="224" id="OpL-ZD-L7Q"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="DFL-Y5-xKX" firstAttribute="top" secondItem="H83-Gg-shR" secondAttribute="bottom" constant="8" symbolic="YES" id="4kc-Z9-z4n"/>
+                            <constraint firstItem="H83-Gg-shR" firstAttribute="leading" secondItem="fCZ-V6-vuz" secondAttribute="leading" id="9vg-N4-hdR"/>
                             <constraint firstItem="mm4-i5-i9l" firstAttribute="centerY" secondItem="fCZ-V6-vuz" secondAttribute="centerY" constant="-371.5" id="COu-F8-jrp"/>
+                            <constraint firstItem="DFL-Y5-xKX" firstAttribute="centerX" secondItem="H83-Gg-shR" secondAttribute="centerX" id="O8m-0g-vqe"/>
+                            <constraint firstItem="Fjp-iO-V2I" firstAttribute="trailing" secondItem="DFL-Y5-xKX" secondAttribute="trailing" constant="20" id="Vhv-f9-jwl"/>
                             <constraint firstItem="mm4-i5-i9l" firstAttribute="centerX" secondItem="fCZ-V6-vuz" secondAttribute="centerX" id="aCV-KN-hUH"/>
                             <constraint firstItem="zNG-TY-5jD" firstAttribute="centerX" secondItem="fCZ-V6-vuz" secondAttribute="centerX" constant="-160.5" id="dGo-7p-t7r"/>
+                            <constraint firstItem="DFL-Y5-xKX" firstAttribute="leading" secondItem="Fjp-iO-V2I" secondAttribute="leading" constant="20" id="dJY-nE-kH0"/>
                             <constraint firstItem="zNG-TY-5jD" firstAttribute="centerY" secondItem="fCZ-V6-vuz" secondAttribute="centerY" constant="-367" id="gRd-EW-ge2"/>
+                            <constraint firstItem="H83-Gg-shR" firstAttribute="centerX" secondItem="mm4-i5-i9l" secondAttribute="centerX" id="oGw-E4-ucu"/>
+                            <constraint firstItem="H83-Gg-shR" firstAttribute="top" secondItem="zNG-TY-5jD" secondAttribute="bottom" constant="8" symbolic="YES" id="ruy-DK-J8J"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fjp-iO-V2I"/>
                     </view>
@@ -308,6 +341,16 @@ Winnings:</string>
                                     <action selector="FoldButtonPressed:" destination="gZy-ZD-3pN" eventType="touchUpInside" id="weU-Gu-Hjz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12t-yx-Ylj">
+                                <rect key="frame" x="20" y="47" width="76" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Rules">
+                                    <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <segue destination="80u-3i-7hu" kind="presentation" id="BGA-Sp-Eq2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.78497779187817263" green="0.17191939383555679" blue="0.1510452297257803" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -354,9 +397,11 @@ Winnings:</string>
                             <constraint firstItem="Vc7-nR-83H" firstAttribute="centerY" secondItem="Sqe-66-P4n" secondAttribute="centerY" id="rDT-jf-O7n"/>
                             <constraint firstItem="i2m-Nu-bC0" firstAttribute="top" secondItem="Vch-iS-eEw" secondAttribute="top" id="rEL-yr-t2K"/>
                             <constraint firstItem="OMv-wW-uJ4" firstAttribute="trailing" secondItem="i2m-Nu-bC0" secondAttribute="trailing" id="sGf-ug-Thj"/>
+                            <constraint firstItem="12t-yx-Ylj" firstAttribute="centerY" secondItem="NDc-4F-jNe" secondAttribute="centerY" constant="-375.5" id="tKG-88-6xs"/>
                             <constraint firstItem="xjV-Us-2hd" firstAttribute="bottom" secondItem="GW2-Rz-OjZ" secondAttribute="bottom" constant="28" id="u0X-j2-zXJ"/>
                             <constraint firstItem="Nuz-O7-H4o" firstAttribute="leading" secondItem="Vc7-nR-83H" secondAttribute="leading" id="vH0-cK-4K8"/>
                             <constraint firstItem="hsa-Ja-4sL" firstAttribute="top" secondItem="oQl-DU-4OA" secondAttribute="top" id="vLV-b1-V40"/>
+                            <constraint firstItem="12t-yx-Ylj" firstAttribute="centerX" secondItem="NDc-4F-jNe" secondAttribute="centerX" constant="-149" id="vkW-mk-wvU"/>
                             <constraint firstItem="NXF-Ry-2H3" firstAttribute="baseline" secondItem="4JC-5W-8oR" secondAttribute="firstBaseline" id="wnD-Lz-pZV"/>
                             <constraint firstItem="OMv-wW-uJ4" firstAttribute="leading" secondItem="i2m-Nu-bC0" secondAttribute="leading" id="xAM-7J-jXI"/>
                             <constraint firstItem="OMv-wW-uJ4" firstAttribute="top" secondItem="i2m-Nu-bC0" secondAttribute="bottom" constant="8" symbolic="YES" id="zuT-T2-crl"/>
@@ -380,16 +425,16 @@ Winnings:</string>
             </objects>
             <point key="canvasLocation" x="-362.31884057971018" y="1062.7232142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="lgt-tZ-5Pe">
             <objects>
-                <viewController id="5Pi-lE-ih3" sceneMemberID="viewController">
+                <viewController id="5Pi-lE-ih3" customClass="ProfileViewController" customModule="quickBlackjack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="If7-zL-796">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0i-vS-wfv">
-                                <rect key="frame" x="109" y="74" width="196" height="74"/>
+                                <rect key="frame" x="109" y="49" width="196" height="99"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Profile">
                                         <attributes>
@@ -452,11 +497,6 @@ Winnings:</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Us-p1-4eZ">
-                                <rect key="frame" x="24" y="92" width="38" height="38"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" image="back.png"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTN-h5-PtP">
                                 <rect key="frame" x="154" y="613" width="70" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -464,6 +504,21 @@ Winnings:</string>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKd-XM-6NC">
+                                <rect key="frame" x="356" y="79" width="38" height="38"/>
+                                <state key="normal" image="settings.png"/>
+                                <connections>
+                                    <segue destination="i39-Ig-4cM" kind="presentation" id="mut-fI-BPd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Us-p1-4eZ" userLabel="Back">
+                                <rect key="frame" x="20" y="79" width="38" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="back.png"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="5Pi-lE-ih3" eventType="primaryActionTriggered" id="fYz-V4-c2f"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -473,23 +528,25 @@ Winnings:</string>
                             <constraint firstItem="M8t-6s-cKe" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" constant="-108.5" id="CCD-Ab-QNR"/>
                             <constraint firstItem="fFj-b6-YI3" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="263.5" id="CbZ-py-xVm"/>
                             <constraint firstItem="dC8-5t-Icj" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="31.5" id="CfS-Sz-Srr"/>
+                            <constraint firstItem="7Us-p1-4eZ" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="-350" id="DK3-Ta-6BH"/>
                             <constraint firstItem="qHv-FJ-bB2" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" id="Dsu-dT-mRw"/>
+                            <constraint firstItem="V0i-vS-wfv" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="-349.5" id="FH0-NT-GpY"/>
                             <constraint firstItem="oTK-T6-V3N" firstAttribute="top" secondItem="V0i-vS-wfv" secondAttribute="bottom" constant="16" id="Ipj-D4-1h5"/>
                             <constraint firstItem="qHv-FJ-bB2" firstAttribute="top" secondItem="oTK-T6-V3N" secondAttribute="bottom" constant="23" id="KX2-QQ-gMw"/>
                             <constraint firstItem="Nav-eX-xfR" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="-39" id="NX1-uf-KZc"/>
                             <constraint firstItem="oTK-T6-V3N" firstAttribute="top" secondItem="If7-zL-796" secondAttribute="top" constant="164" id="SL0-Pb-YYo"/>
-                            <constraint firstItem="V0i-vS-wfv" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="-337" id="TN5-fD-NRY"/>
                             <constraint firstItem="oTK-T6-V3N" firstAttribute="centerX" secondItem="qHv-FJ-bB2" secondAttribute="centerX" id="TYV-cV-D8B"/>
+                            <constraint firstItem="V0i-vS-wfv" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" id="Vpf-7S-j6m"/>
                             <constraint firstItem="6rg-yr-08y" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" constant="65" id="VrT-AK-oBU"/>
+                            <constraint firstItem="7Us-p1-4eZ" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" constant="-168" id="XhL-cW-MPz"/>
                             <constraint firstItem="M8t-6s-cKe" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="30" id="YMt-G6-vay"/>
-                            <constraint firstItem="7Us-p1-4eZ" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="-337" id="cUH-nw-ggq"/>
+                            <constraint firstItem="jKd-XM-6NC" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" constant="168" id="amL-1u-nGP"/>
                             <constraint firstItem="JRq-HS-lQx" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="104.5" id="dCY-bH-icO"/>
-                            <constraint firstItem="V0i-vS-wfv" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" id="eGL-3C-xM6"/>
                             <constraint firstItem="qHv-FJ-bB2" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="-119.5" id="eSi-hA-h2x"/>
-                            <constraint firstItem="7Us-p1-4eZ" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" constant="-164" id="fkd-1k-L5J"/>
                             <constraint firstItem="JRq-HS-lQx" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" constant="65" id="hfT-6P-skh"/>
                             <constraint firstItem="Dxs-6W-d6t" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="104" id="iDM-bA-lkQ"/>
                             <constraint firstItem="6rg-yr-08y" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="-40.5" id="kbR-iA-mCC"/>
+                            <constraint firstItem="jKd-XM-6NC" firstAttribute="centerY" secondItem="If7-zL-796" secondAttribute="centerY" constant="-350" id="ovT-yT-gHp"/>
                             <constraint firstItem="oTK-T6-V3N" firstAttribute="leading" secondItem="oDs-Ro-uDG" secondAttribute="leading" constant="138" id="qhn-4b-vO2"/>
                             <constraint firstItem="Dxs-6W-d6t" firstAttribute="centerX" secondItem="If7-zL-796" secondAttribute="centerX" constant="-120.5" id="wmy-cO-R2d"/>
                             <constraint firstItem="oTK-T6-V3N" firstAttribute="leading" secondItem="fFj-b6-YI3" secondAttribute="leading" id="xs9-vc-m69"/>
@@ -557,12 +614,18 @@ Winnings:</string>
         </scene>
     </scenes>
     <resources>
+        <image name="Blackjack-values.png" width="928" height="521"/>
         <image name="Unknown.png" width="225" height="225"/>
         <image name="back.png" width="37.5" height="37.5"/>
         <image name="bck.jpg" width="1399.6800537109375" height="979.91998291015625"/>
+        <image name="settings.png" width="37.5" height="37.5"/>
         <image name="splashimg.png" width="1080" height="1920"/>
         <image name="tabPic1.png" width="18" height="18"/>
         <image name="tabPic2.png" width="22.5" height="22.5"/>
         <image name="tabPic3.png" width="22.5" height="22.5"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="BGA-Sp-Eq2"/>
+        <segue reference="mut-fI-BPd"/>
+    </inferredMetricsTieBreakers>
 </document>
