@@ -47,13 +47,15 @@ class ProfileViewController: UIViewController{
     @IBAction func logOutPressed(_ sender: UIButton) {
         let alert = UIAlertController(title: "Log Out", message: "Are you sure you want to log out?", preferredStyle: .alert)
         
-        let action1 = UIAlertAction(title: "Yes", style: .default)
-        let action2 = UIAlertAction(title: "No", style: .destructive)
+        let action1 = UIAlertAction(title: "Yes", style: .destructive)
+        let action2 = UIAlertAction(title: "No", style: .default)
 
         
         alert.addAction(action1)
         alert.addAction(action2)
         present(alert,animated: true, completion: nil)
     }
+    
+    
     
 }

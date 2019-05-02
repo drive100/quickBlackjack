@@ -548,6 +548,7 @@ Winnings:</string>
                                 </state>
                                 <connections>
                                     <action selector="logOutPressed:" destination="5Pi-lE-ih3" eventType="primaryActionTriggered" id="uu0-FL-t7U"/>
+                                    <segue destination="DPX-90-gC1" kind="presentation" id="pBw-uf-dq9"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Daniel" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6rg-yr-08y">
@@ -639,7 +640,7 @@ Winnings:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7v-gk-8f6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="1576"/>
+            <point key="canvasLocation" x="1040.5797101449275" y="1575.6696428571429"/>
         </scene>
         <!--Leaderboard-->
         <scene sceneID="GNR-TV-gse">
@@ -731,6 +732,6 @@ Winnings:</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Gum-Zf-elc"/>
-        <segue reference="fHf-Nh-bFe"/>
+        <segue reference="mut-fI-BPd"/>
     </inferredMetricsTieBreakers>
 </document>
