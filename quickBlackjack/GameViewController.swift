@@ -263,25 +263,27 @@ class GameViewController: Swipe {
     func calculateWinLoss(){
         if ((over21 || !won) && !equal21){
             totalWinnings = totalWinnings - bet
-            payoutText.text = String((-totalWinnings))
+            payoutText.text = String((-bet))
             TotalScoreText.text = String(totalWinnings)
         }
         else if (equal21){
             totalWinnings = totalWinnings + (3*bet)
-            payoutText.text = String(totalWinnings)
+            payoutText.text = String(3*bet)
             TotalScoreText.text = String(totalWinnings)
         }
         else if (won && !tie){
             totalWinnings = totalWinnings + (2*bet)
-            payoutText.text = String(totalWinnings)
+            payoutText.text = String(2*bet)
             TotalScoreText.text = String(totalWinnings)
         }
         else if (tie){
             totalWinnings = totalWinnings + (bet)
-            payoutText.text = String(totalWinnings)
+            payoutText.text = String(bet)
             TotalScoreText.text = String(totalWinnings)
         }
-        if (totalWinnings < 0) {TotalScoreText.text = "0"}
+        
+        if (totalWinnings < 0) {totalWinnings = 0
+            TotalScoreText.text = "0"}
 
 
         reset()

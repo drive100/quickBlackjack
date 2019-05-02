@@ -224,7 +224,7 @@ If you get 21 points exactly on the deal, that is called a “blackjack.” If y
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bck.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dpS-bz-sj9">
-                                <rect key="frame" x="-493" y="-42" width="1400" height="980"/>
+                                <rect key="frame" x="199" y="440" width="16" height="16"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aLE-4J-QO7">
                                 <rect key="frame" x="141" y="146" width="120" height="189"/>
