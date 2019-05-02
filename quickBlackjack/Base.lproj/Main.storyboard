@@ -40,24 +40,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disable Music" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlS-hg-zfe">
+                                <rect key="frame" x="49" y="272" width="127.5" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CFt-Bp-sjn">
+                                <rect key="frame" x="299" y="264" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchClicked:" destination="i39-Ig-4cM" eventType="valueChanged" id="b3W-te-XYt"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gjL-LG-VhZ" firstAttribute="centerY" secondItem="5va-ox-WxK" secondAttribute="centerY" constant="-246" id="CJj-C0-6vC"/>
+                            <constraint firstItem="CFt-Bp-sjn" firstAttribute="centerY" secondItem="5va-ox-WxK" secondAttribute="centerY" constant="-168.5" id="FnO-iV-Kcn"/>
                             <constraint firstItem="xmn-cf-n9T" firstAttribute="centerY" secondItem="5va-ox-WxK" secondAttribute="centerY" constant="-243.5" id="IZ2-7R-smO"/>
                             <constraint firstItem="x06-hx-NA1" firstAttribute="centerY" secondItem="5va-ox-WxK" secondAttribute="centerY" constant="-368.5" id="JpV-Rf-Fkz"/>
+                            <constraint firstItem="CFt-Bp-sjn" firstAttribute="centerX" secondItem="5va-ox-WxK" secondAttribute="centerX" constant="116.5" id="RQk-eY-TPn"/>
+                            <constraint firstItem="MlS-hg-zfe" firstAttribute="centerX" secondItem="5va-ox-WxK" secondAttribute="centerX" constant="-94.5" id="Sib-5e-NEP"/>
                             <constraint firstItem="x06-hx-NA1" firstAttribute="centerX" secondItem="5va-ox-WxK" secondAttribute="centerX" id="XFZ-PH-wuC"/>
                             <constraint firstItem="sHI-h5-6jo" firstAttribute="centerY" secondItem="5va-ox-WxK" secondAttribute="centerY" constant="-360" id="fsb-YT-IBv"/>
                             <constraint firstItem="gjL-LG-VhZ" firstAttribute="centerX" secondItem="5va-ox-WxK" secondAttribute="centerX" constant="-51" id="hfp-zu-vb2"/>
+                            <constraint firstItem="MlS-hg-zfe" firstAttribute="centerY" secondItem="5va-ox-WxK" secondAttribute="centerY" constant="-163.5" id="hi7-UX-TJn"/>
                             <constraint firstItem="xmn-cf-n9T" firstAttribute="centerX" secondItem="5va-ox-WxK" secondAttribute="centerX" constant="117.5" id="prf-IC-Fyk"/>
                             <constraint firstItem="sHI-h5-6jo" firstAttribute="centerX" secondItem="5va-ox-WxK" secondAttribute="centerX" constant="-156" id="rSz-vJ-een"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4xO-LO-Erw"/>
                     </view>
+                    <connections>
+                        <outlet property="musicSwitch" destination="CFt-Bp-sjn" id="ohR-jQ-82c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLR-NL-HQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3823" y="2194"/>
+            <point key="canvasLocation" x="-3823.188405797102" y="2193.75"/>
         </scene>
         <!--Splash Page View Controller-->
         <scene sceneID="J0M-PT-sbY">
@@ -257,7 +276,7 @@ If you get 21 points exactly on the deal, that is called a “blackjack.” If y
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vc7-nR-83H">
-                                <rect key="frame" x="333" y="683.5" width="59.5" height="30"/>
+                                <rect key="frame" x="332.5" y="683.5" width="60" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -288,7 +307,7 @@ If you get 21 points exactly on the deal, that is called a “blackjack.” If y
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nuz-O7-H4o">
-                                <rect key="frame" x="331.5" y="750.5" width="59.5" height="30"/>
+                                <rect key="frame" x="331" y="750.5" width="60" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -346,7 +365,7 @@ Winnings:</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi3-mM-NgY">
-                                <rect key="frame" x="31" y="681" width="120" height="38"/>
+                                <rect key="frame" x="31" y="681" width="120" height="37"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Stay"/>
@@ -363,7 +382,7 @@ Winnings:</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="val" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDO-Ry-ff4">
-                                <rect key="frame" x="219" y="619.5" width="35" height="33.5"/>
+                                <rect key="frame" x="219" y="619" width="35" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -375,6 +394,20 @@ Winnings:</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CB-Tq-huf">
+                                <rect key="frame" x="31" y="746" width="120" height="41"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="xsb-WT-bZz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Post Score">
+                                    <color key="titleColor" red="1" green="0.1175853208" blue="0.1042221836" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="postPressed:" destination="gZy-ZD-3pN" eventType="primaryActionTriggered" id="5TF-18-vxB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.78497779187817263" green="0.17191939383555679" blue="0.1510452297257803" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -398,10 +431,12 @@ Winnings:</string>
                             <constraint firstItem="Vch-iS-eEw" firstAttribute="trailing" secondItem="pex-9q-7mW" secondAttribute="trailing" constant="-8" id="K1J-W5-CzM"/>
                             <constraint firstItem="NDO-Ry-ff4" firstAttribute="centerY" secondItem="NDc-4F-jNe" secondAttribute="centerY" constant="188" id="L5D-X7-fya"/>
                             <constraint firstItem="nSW-4V-M7m" firstAttribute="centerX" secondItem="dpS-bz-sj9" secondAttribute="centerX" constant="-6" id="NXW-HX-seZ"/>
+                            <constraint firstItem="5CB-Tq-huf" firstAttribute="centerY" secondItem="Nuz-O7-H4o" secondAttribute="centerY" constant="1" id="OC5-gm-TF7"/>
                             <constraint firstItem="pwP-RV-9tE" firstAttribute="leading" secondItem="oQl-DU-4OA" secondAttribute="trailing" constant="44" id="PJY-db-B25"/>
                             <constraint firstItem="i2m-Nu-bC0" firstAttribute="bottom" secondItem="aLE-4J-QO7" secondAttribute="bottom" id="POu-ka-Xzy"/>
                             <constraint firstItem="Vch-iS-eEw" firstAttribute="top" secondItem="pex-9q-7mW" secondAttribute="bottom" constant="46" id="RVT-7C-HfE"/>
                             <constraint firstItem="dpS-bz-sj9" firstAttribute="centerX" secondItem="NDc-4F-jNe" secondAttribute="centerX" id="Rfl-Ru-MzK"/>
+                            <constraint firstItem="5CB-Tq-huf" firstAttribute="trailing" secondItem="fi3-mM-NgY" secondAttribute="trailing" id="TSk-u1-73F"/>
                             <constraint firstItem="pex-9q-7mW" firstAttribute="leading" secondItem="xjV-Us-2hd" secondAttribute="leading" constant="335" id="VoC-Jo-Baz"/>
                             <constraint firstItem="pwP-RV-9tE" firstAttribute="centerX" secondItem="NDc-4F-jNe" secondAttribute="centerX" constant="29.5" id="Wb4-hf-cH5"/>
                             <constraint firstItem="Sqe-66-P4n" firstAttribute="centerY" secondItem="NDc-4F-jNe" secondAttribute="centerY" constant="248" id="WcA-vC-2ef"/>
@@ -426,11 +461,13 @@ Winnings:</string>
                             <constraint firstItem="NDO-Ry-ff4" firstAttribute="centerX" secondItem="NDc-4F-jNe" secondAttribute="centerX" constant="29.5" id="l44-TU-iZt"/>
                             <constraint firstItem="4JC-5W-8oR" firstAttribute="centerX" secondItem="NDc-4F-jNe" secondAttribute="centerX" constant="120" id="mvl-Uc-fIu"/>
                             <constraint firstItem="GW2-Rz-OjZ" firstAttribute="leading" secondItem="xjV-Us-2hd" secondAttribute="leading" constant="195" id="nuO-nC-2YH"/>
+                            <constraint firstItem="5CB-Tq-huf" firstAttribute="top" secondItem="fi3-mM-NgY" secondAttribute="bottom" constant="28" id="qUz-XH-sNo"/>
                             <constraint firstItem="i2m-Nu-bC0" firstAttribute="top" secondItem="Vch-iS-eEw" secondAttribute="top" id="rEL-yr-t2K"/>
                             <constraint firstItem="OMv-wW-uJ4" firstAttribute="trailing" secondItem="i2m-Nu-bC0" secondAttribute="trailing" id="sGf-ug-Thj"/>
                             <constraint firstItem="oo1-CH-yzE" firstAttribute="bottom" secondItem="NDO-Ry-ff4" secondAttribute="bottom" id="sJp-ql-hJQ"/>
                             <constraint firstItem="12t-yx-Ylj" firstAttribute="centerY" secondItem="NDc-4F-jNe" secondAttribute="centerY" constant="-375.5" id="tKG-88-6xs"/>
                             <constraint firstItem="xjV-Us-2hd" firstAttribute="bottom" secondItem="GW2-Rz-OjZ" secondAttribute="bottom" constant="28" id="u0X-j2-zXJ"/>
+                            <constraint firstItem="5CB-Tq-huf" firstAttribute="leading" secondItem="fi3-mM-NgY" secondAttribute="leading" id="vcf-KC-WnX"/>
                             <constraint firstItem="12t-yx-Ylj" firstAttribute="centerX" secondItem="NDc-4F-jNe" secondAttribute="centerX" constant="-149" id="vkW-mk-wvU"/>
                             <constraint firstItem="hsa-Ja-4sL" firstAttribute="centerX" secondItem="NDc-4F-jNe" secondAttribute="centerX" constant="142" id="x13-wQ-MHP"/>
                             <constraint firstItem="OMv-wW-uJ4" firstAttribute="leading" secondItem="i2m-Nu-bC0" secondAttribute="leading" id="xAM-7J-jXI"/>

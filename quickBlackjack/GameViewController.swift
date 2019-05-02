@@ -9,13 +9,16 @@
 import UIKit
 import AVFoundation
 
-class GameViewController: UIViewController {
+struct music {
+    static var audioPlayer: AVAudioPlayer?
+    static var audioPlayer1: AVAudioPlayer?
+    
+}
 
+class GameViewController: UIViewController {
+    
     
     //variables
-    var audioPlayer: AVAudioPlayer?
-    var audioPlayer1: AVAudioPlayer?
-    
     //goes from 1 to 6 (ie imageview placements)
     var place_id = 0 //starting bottomleft
     var value_id = 1
@@ -45,7 +48,20 @@ class GameViewController: UIViewController {
     @IBOutlet weak var bottomMiddle: UIImageView!
     
     //button functions
+    @IBAction func postPressed(_ sender: Any) {
+        let alert = UIAlertController(title: "Post Score?", message: "Are you done playing and want to post your score on the leaderboard?", preferredStyle: .alert)
+        
+        let action1 = UIAlertAction(title: "Yes", style: .default)
+        //{action in self.reset()}
+        
+        let action2 =  UIAlertAction(title: "No", style: .default)
+        
+        alert.addAction(action1)
+        alert.addAction(action2)
+        present(alert,animated: true, completion: nil)
+    }
     
+  
     @IBAction func stayPressed(_ sender: Any) {
         let alert = UIAlertController(title: "Stay?", message: "Are you sure you want to stay with this hand?", preferredStyle: .alert)
         
@@ -59,6 +75,15 @@ class GameViewController: UIViewController {
         present(alert,animated: true, completion: nil)
     }
     @IBAction func betPressed(_ sender: UIButton) {
+        if (Int(totalBetText.text!) == 0){
+            let alert = UIAlertController(title: "No bet placed!", message: "You need to set your bet before playing next card!", preferredStyle: .alert)
+            
+            let action1 = UIAlertAction(title: "Ok", style: .default)
+            //{action in self.calculateWinLoss()}
+            
+            alert.addAction(action1)
+            present(alert,animated: true, completion: nil)
+        }else{
         let newCard = randomizer()
         switch(place_id){
         case 1:
@@ -86,14 +111,14 @@ class GameViewController: UIViewController {
         
         do {
             if let fileURL = Bundle.main.path(forResource: "card", ofType: "wav") {
-                audioPlayer1 = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: fileURL))
+                music.audioPlayer1 = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: fileURL))
             } else {
                 print("No file with specified name exists")
             }
         } catch let error {
             print("Can't play the audio file failed with an error \(error.localizedDescription)")
         }
-        audioPlayer1?.play()
+        music.audioPlayer1?.play()
         
         if (over21){
         let alert = UIAlertController(title: "Game Over", message: "You went over 21! Click ok to start a new game", preferredStyle: .alert)
@@ -113,6 +138,7 @@ class GameViewController: UIViewController {
             alert.addAction(action1)
             present(alert,animated: true, completion: nil)
             
+        }
         }
     }
     
@@ -147,15 +173,15 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         do {
             if let fileURL = Bundle.main.path(forResource: "casino", ofType: "mp3") {
-                audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: fileURL))
+                music.audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: fileURL))
             } else {
                 print("No file with specified name exists")
             }
         } catch let error {
             print("Can't play the audio file failed with an error \(error.localizedDescription)")
         }
-        audioPlayer?.play()
-        audioPlayer?.numberOfLoops = -1
+        music.audioPlayer?.play()
+        music.audioPlayer?.numberOfLoops = -1
 
         totalValue.text =  "0"
         payoutText.text = "0"

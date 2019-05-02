@@ -7,28 +7,35 @@
 //
 
 import UIKit
+import AVFoundation
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController{
 
+    var click = false
+    @IBOutlet weak var musicSwitch: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
+        musicSwitch.isOn = false
+        
         // Do any additional setup after loading the view.
     }
+    @IBAction func switchClicked(_ sender: Any) {
+        if (!click){
+            music.audioPlayer?.numberOfLoops = 0
+            music.audioPlayer?.stop()
+        }else if (click){
+            music.audioPlayer?.numberOfLoops = -1
+            music.audioPlayer?.play()
+        }
+        click = !click
+
+    }
+    
     @IBAction func close(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
 
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
