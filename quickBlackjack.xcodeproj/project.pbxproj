@@ -33,6 +33,7 @@
 		9EC3DD1F225E72D0005D2D55 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC3DD1E225E72D0005D2D55 /* GameViewController.swift */; };
 		9EC3DD24225E72D1005D2D55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EC3DD23225E72D1005D2D55 /* Assets.xcassets */; };
 		9EC3DD2F225E7552005D2D55 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC3DD2E225E7552005D2D55 /* MapViewController.swift */; };
+		9ECF7DC9227A6E2400369D7A /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF7DC8227A6E2400369D7A /* LeaderboardViewController.swift */; };
 		FCD29C6A538C3944449B1683 /* Pods_quickBlackjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C33A5366F99FDC2356D2CD /* Pods_quickBlackjack.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		9EC3DD23225E72D1005D2D55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EC3DD28225E72D1005D2D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EC3DD2E225E7552005D2D55 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		9ECF7DC8227A6E2400369D7A /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		D05E97CF560D3DECD39D16A7 /* Pods-quickBlackjack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quickBlackjack.debug.xcconfig"; path = "Target Support Files/Pods-quickBlackjack/Pods-quickBlackjack.debug.xcconfig"; sourceTree = "<group>"; };
 		DE5D3DECA8E92CACE9F78DC5 /* Pods-quickBlackjack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quickBlackjack.release.xcconfig"; path = "Target Support Files/Pods-quickBlackjack/Pods-quickBlackjack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 				9E16644D22795B2500E4F147 /* TabBarViewController.swift */,
 				9E28F60922769411005856D2 /* tabPic2.png */,
 				9EB837882266884C00BC0795 /* SettingsViewController.swift */,
+				9ECF7DC8227A6E2400369D7A /* LeaderboardViewController.swift */,
 				9E19296E2266786800CE8BAD /* SplashPageViewController.swift */,
 				9E6405FA2278FE9B0060DB50 /* GoogleService-Info.plist */,
 				9E28F6052276939B005856D2 /* tabPic1.png */,
@@ -266,6 +269,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-quickBlackjack/Pods-quickBlackjack-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -273,6 +277,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +294,7 @@
 			files = (
 				9E16644E22795B2500E4F147 /* TabBarViewController.swift in Sources */,
 				9E19297122667A4D00CE8BAD /* MapAnnotation.swift in Sources */,
+				9ECF7DC9227A6E2400369D7A /* LeaderboardViewController.swift in Sources */,
 				9E19296F2266786800CE8BAD /* SplashPageViewController.swift in Sources */,
 				9EB837892266884C00BC0795 /* SettingsViewController.swift in Sources */,
 				9EC3DD1F225E72D0005D2D55 /* GameViewController.swift in Sources */,

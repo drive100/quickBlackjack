@@ -7,4 +7,5 @@ target 'quickBlackjack' do
 
   # Pods for quickBlackjack
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
 end

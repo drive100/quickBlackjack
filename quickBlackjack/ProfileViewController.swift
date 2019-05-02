@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
-
+class ProfileViewController: UIViewController{
+    
+    
     //editable fields
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!

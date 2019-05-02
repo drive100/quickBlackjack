@@ -604,13 +604,13 @@ Winnings:</string>
         <!--Leaderboard-->
         <scene sceneID="GNR-TV-gse">
             <objects>
-                <viewController id="J2g-6I-xDb" sceneMemberID="viewController">
+                <viewController id="J2g-6I-xDb" customClass="LeaderboardViewController" customModule="quickBlackjack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CQ9-QJ-iV3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbG-Kq-U3l">
-                                <rect key="frame" x="29.5" y="73.5" width="357.5" height="55.5"/>
+                                <rect key="frame" x="29" y="73" width="358" height="56"/>
                                 <attributedString key="attributedText">
                                     <fragment content="~Leaderboard~">
                                         <attributes>
@@ -622,11 +622,33 @@ Winnings:</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6gw-oK-873">
+                                <rect key="frame" x="29" y="136" width="356" height="624"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="4PE-YX-w0k">
+                                        <rect key="frame" x="0.0" y="28" width="356" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4PE-YX-w0k" id="9HB-Rv-fCH">
+                                            <rect key="frame" x="0.0" y="0.0" width="356" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="J2g-6I-xDb" id="JPc-no-7wq"/>
+                                    <outlet property="delegate" destination="J2g-6I-xDb" id="DjW-JJ-L7a"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6gw-oK-873" firstAttribute="leading" secondItem="gbG-Kq-U3l" secondAttribute="leading" id="4Uh-ue-IS5"/>
+                            <constraint firstItem="6gw-oK-873" firstAttribute="centerX" secondItem="CQ9-QJ-iV3" secondAttribute="centerX" id="Rw6-JY-rGn"/>
                             <constraint firstItem="gbG-Kq-U3l" firstAttribute="centerY" secondItem="CQ9-QJ-iV3" secondAttribute="centerY" constant="-347" id="aQj-Bd-X35"/>
                             <constraint firstItem="gbG-Kq-U3l" firstAttribute="centerX" secondItem="CQ9-QJ-iV3" secondAttribute="centerX" constant="1" id="sCP-Ol-5Pv"/>
+                            <constraint firstItem="6gw-oK-873" firstAttribute="top" secondItem="gbG-Kq-U3l" secondAttribute="bottom" constant="7" id="xS5-24-K4b"/>
+                            <constraint firstItem="6gw-oK-873" firstAttribute="centerY" secondItem="CQ9-QJ-iV3" secondAttribute="centerY" id="zvd-9i-DB8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="l3R-Ec-Vl2"/>
                     </view>
@@ -634,7 +656,7 @@ Winnings:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxc-Uo-5QW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-362" y="146"/>
+            <point key="canvasLocation" x="-362.31884057971018" y="145.98214285714286"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="V23-oM-xLY">
