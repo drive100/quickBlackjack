@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LeaderboardViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
+class LeaderboardViewController: Swipe , UITableViewDelegate, UITableViewDataSource{
     
     let list = ["surferdude22                               12345", "rpgplayer89                                  9999", "xding101                                        1000", "cusekid11                                       500"]
     

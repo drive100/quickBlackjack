@@ -76,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLR-NL-HQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3823.188405797102" y="2193.75"/>
+            <point key="canvasLocation" x="-2355" y="1538"/>
         </scene>
         <!--Splash Page View Controller-->
         <scene sceneID="J0M-PT-sbY">
@@ -188,7 +188,7 @@ If you get 21 points exactly on the deal, that is called a “blackjack.” If y
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDf-Rw-fgx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2117" y="1469"/>
+            <point key="canvasLocation" x="-409" y="1162"/>
         </scene>
         <!--Map-->
         <scene sceneID="Yg1-YK-gJp">
@@ -213,7 +213,7 @@ If you get 21 points exactly on the deal, that is called a “blackjack.” If y
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zsQ-gc-uBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-362" y="-733"/>
+            <point key="canvasLocation" x="-171" y="-214"/>
         </scene>
         <!--Game-->
         <scene sceneID="7JR-F7-8q1">
@@ -481,7 +481,7 @@ Winnings:</string>
                         <outlet property="bottomLeft" destination="OMv-wW-uJ4" id="mKG-TF-BDX"/>
                         <outlet property="bottomMiddle" destination="nSW-4V-M7m" id="EOz-x4-B4T"/>
                         <outlet property="bottomRight" destination="t1z-SP-vJW" id="wka-Hm-VAz"/>
-                        <outlet property="payoutText" destination="Vc7-nR-83H" id="qyt-cH-9YG"/>
+                        <outlet property="payoutText" destination="Vc7-nR-83H" id="aA7-40-Esi"/>
                         <outlet property="topLeft" destination="i2m-Nu-bC0" id="o4p-Ju-ZJW"/>
                         <outlet property="topMiddle" destination="aLE-4J-QO7" id="tia-Kv-ddA"/>
                         <outlet property="topRight" destination="Vch-iS-eEw" id="Ie9-si-qGd"/>
@@ -491,7 +491,7 @@ Winnings:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XJS-bE-riV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-362.31884057971018" y="1062.7232142857142"/>
+            <point key="canvasLocation" x="2007" y="776"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="lgt-tZ-5Pe">
@@ -516,8 +516,8 @@ Winnings:</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Unknown.png" translatesAutoresizingMaskIntoConstraints="NO" id="oTK-T6-V3N">
                                 <rect key="frame" x="138" y="164" width="138" height="128"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHv-FJ-bB2">
-                                <rect key="frame" x="159.5" y="315" width="95" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drive100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHv-FJ-bB2">
+                                <rect key="frame" x="165" y="315" width="84" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -550,20 +550,23 @@ Winnings:</string>
                                     <action selector="logOutPressed:" destination="5Pi-lE-ih3" eventType="primaryActionTriggered" id="uu0-FL-t7U"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6rg-yr-08y">
-                                <rect key="frame" x="258.5" y="391" width="27" height="33"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Daniel" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6rg-yr-08y">
+                                <rect key="frame" x="228.5" y="391" width="87" height="33"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="fnameEdit:" destination="5Pi-lE-ih3" eventType="editingDidEnd" id="7xP-fS-Ghg"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Rivera" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dC8-5t-Icj">
+                                <rect key="frame" x="229" y="463" width="86" height="33"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dC8-5t-Icj">
-                                <rect key="frame" x="258.5" y="463" width="27" height="33"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JRq-HS-lQx">
-                                <rect key="frame" x="258.5" y="536" width="27" height="33"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="drive100@syr.edu" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JRq-HS-lQx">
+                                <rect key="frame" x="167.5" y="536" width="209" height="33"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -636,7 +639,7 @@ Winnings:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7v-gk-8f6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-362" y="2194"/>
+            <point key="canvasLocation" x="1042" y="1576"/>
         </scene>
         <!--Leaderboard-->
         <scene sceneID="GNR-TV-gse">
@@ -693,7 +696,7 @@ Winnings:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxc-Uo-5QW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-362.31884057971018" y="145.98214285714286"/>
+            <point key="canvasLocation" x="1291" y="136"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="V23-oM-xLY">

@@ -15,7 +15,7 @@ struct music {
     
 }
 
-class GameViewController: UIViewController {
+class GameViewController: Swipe {
     
     
     //variables
@@ -34,10 +34,10 @@ class GameViewController: UIViewController {
     var tie = false
     
     //labels
-    @IBOutlet weak var payoutText: UILabel!
     @IBOutlet weak var totalBetText: UILabel!
     @IBOutlet weak var TotalScoreText: UILabel!
     @IBOutlet weak var totalValue: UILabel!
+    @IBOutlet weak var payoutText: UILabel!
     
     //imageView connections
     @IBOutlet weak var topRight: UIImageView!
@@ -263,21 +263,27 @@ class GameViewController: UIViewController {
     func calculateWinLoss(){
         if ((over21 || !won) && !equal21){
             totalWinnings = totalWinnings - bet
+            payoutText.text = String((-totalWinnings))
             TotalScoreText.text = String(totalWinnings)
         }
         else if (equal21){
             totalWinnings = totalWinnings + (3*bet)
+            payoutText.text = String(totalWinnings)
             TotalScoreText.text = String(totalWinnings)
         }
         else if (won && !tie){
             totalWinnings = totalWinnings + (2*bet)
+            payoutText.text = String(totalWinnings)
             TotalScoreText.text = String(totalWinnings)
         }
         else if (tie){
             totalWinnings = totalWinnings + (bet)
+            payoutText.text = String(totalWinnings)
             TotalScoreText.text = String(totalWinnings)
         }
-       
+        if (totalWinnings < 0) {TotalScoreText.text = "0"}
+
+
         reset()
     }
 
@@ -298,8 +304,8 @@ class GameViewController: UIViewController {
         topLeft.image = UIImage(named:"png/blank")
         topMiddle.image = UIImage(named:"png/blank")
         topRight.image = UIImage(named:"png/blank")
-        payoutText.text = "0"
         totalBetText.text = "0"
+
         
     }
 }

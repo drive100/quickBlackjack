@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 
-class MapViewController: UIViewController, MKMapViewDelegate,CLLocationManagerDelegate {
+class MapViewController: Swipe, MKMapViewDelegate,CLLocationManagerDelegate {
 
     
     @IBOutlet weak var mapView: MKMapView!

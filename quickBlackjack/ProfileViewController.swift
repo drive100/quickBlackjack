@@ -27,14 +27,33 @@ class ProfileViewController: UIViewController{
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func fnameEdit(_ sender: UITextField) {
+        
+    }
+    
     @IBAction func backPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func savePressed(_ sender: Any) {
+        let alert = UIAlertController(title: "Info Saved!", message: "Saved successfully", preferredStyle: .alert)
+        
+        let action1 = UIAlertAction(title: "Ok", style: .default)
+        
+        alert.addAction(action1)
+        present(alert,animated: true, completion: nil)
     }
     
     @IBAction func logOutPressed(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Log Out", message: "Are you sure you want to log out?", preferredStyle: .alert)
+        
+        let action1 = UIAlertAction(title: "Yes", style: .default)
+        let action2 = UIAlertAction(title: "No", style: .destructive)
+
+        
+        alert.addAction(action1)
+        alert.addAction(action2)
+        present(alert,animated: true, completion: nil)
     }
     
 }
